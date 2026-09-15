@@ -26,3 +26,6 @@ venv/
 .playwright-mcp/
 *.log
 .ipynb_checkpoints/
+# Vercel CLI 링크 정보 (vercel link 가 만든 것)
+.vercel
+.env.local
