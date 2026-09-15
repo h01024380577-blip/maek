@@ -1,0 +1,29 @@
+# ── 비밀·로컬 설정 ──
+backend/.env
+.env
+*.local
+
+# ── 공모전 제공 원본 데이터 (재배포 조건 확인 전까지 저장소에 넣지 않는다) ──
+data/ABP_CONTEST_DATA.csv
+
+# ── 제출 서류·문서 (개인정보 포함) ──
+제출서류/
+*.docx
+*.doc
+*.hwp
+~$*
+
+# ── 빌드·의존성·산출물 ──
+node_modules/
+frontend/dist/
+backend/output/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ── 도구·OS 찌꺼기 ──
+.DS_Store
+.playwright-mcp/
+*.log
+.ipynb_checkpoints/

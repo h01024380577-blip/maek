@@ -1,0 +1,11 @@
+# 맥(脈) 백엔드 — Analytics Engine + Service Layer
+pandas>=2.0
+numpy>=1.24
+fastapi>=0.110
+uvicorn[standard]>=0.27
+# 선택: LLM 진단 서술문. 없으면 템플릿 서술로 자동 폴백한다.
+openai>=1.50
+# backend/.env 에서 OPENAI_API_KEY 를 읽는다
+python-dotenv>=1.0
+# 선택: 인구·소멸위험지수를 xlsx로 받을 때만 필요
+openpyxl>=3.1

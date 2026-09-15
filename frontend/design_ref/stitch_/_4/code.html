@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#f7f9ff","on-primary-container":"#8ba4cf","on-primary-fixed-variant":"#2d476d","secondary-fixed":"#d4e3ff","error-container":"#ffdad6","primary-fixed-dim":"#aec8f4","on-secondary":"#ffffff","inverse-surface":"#27323b","on-surface-variant":"#43474e","on-surface":"#121d26","outline-variant":"#c4c6cf","primary-fixed":"#d5e3ff","surface-dim":"#d0dbe8","inverse-on-surface":"#e7f2ff","on-secondary-fixed-variant":"#004785","on-error-container":"#93000a","secondary-fixed-dim":"#a5c8ff","on-secondary-container":"#00427c","on-tertiary-container":"#e1921d","surface-variant":"#d9e4f1","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#663e00","secondary-container":"#78b0fe","tertiary-fixed":"#ffddb9","on-primary-fixed":"#001c3b","on-tertiary-fixed":"#2b1700","error":"#ba1a1a","secondary":"#1a5fa7","surface-container-highest":"#d9e4f1","surface-tint":"#465f86","primary":"#032448","primary-container":"#1f3a5f","surface-container-lowest":"#ffffff","on-primary":"#ffffff","surface-bright":"#f7f9ff","on-background":"#121d26","tertiary":"#361f00","on-error":"#ffffff","surface-container-high":"#dee9f6","tertiary-container":"#543200","background":"#f7f9ff","inverse-primary":"#aec8f4","outline":"#74777f","surface-container-low":"#ecf4ff","surface-container":"#e4effc","on-secondary-fixed":"#001c3a","tertiary-fixed-dim":"#ffb961"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"1.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2rem","space-lg":"1.5rem","gutter":"1rem"},fontFamily:{"headline-page":["Public Sans"],"headline-section":["Public Sans"],"body-semibold":["Public Sans"],"body-regular":["Public Sans"],"body-medium":["Public Sans"],"caption-regular":["Public Sans"],"table-header":["Public Sans"],"caption-medium":["Public Sans"],"display-kpi":["Public Sans"],"table-cell":["Public Sans"]},fontSize:{"headline-page":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-section":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-semibold":["14px",{lineHeight:"20px",fontWeight:"600"}],"body-regular":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-medium":["14px",{lineHeight:"20px",fontWeight:"500"}],"caption-regular":["12px",{lineHeight:"16px",fontWeight:"400"}],"table-header":["13px",{lineHeight:"18px",fontWeight:"600"}],"caption-medium":["12px",{lineHeight:"16px",fontWeight:"500"}],"display-kpi":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"table-cell":["13px",{lineHeight:"18px",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-regular text-body-regular text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[240px] bg-primary-container text-on-primary z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md border-b border-primary/20"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded bg-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-headline-section text-headline-section font-bold tracking-tight text-on-primary leading-none">맥(脈)</span><span class="font-caption-regular text-caption-regular text-on-primary-container tracking-normal mt-1">지방소멸 조기감지</span></div></div></div><nav class="flex flex-col gap-1 px-space-sm py-space-md" data-active-classes="bg-primary text-on-primary font-body-semibold font-semibold rounded"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="national-overview" href="#"><span class="material-symbols-outlined text-[18px]">public</span><span class="font-body-medium text-body-medium">전국 현황</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="regional-diagnosis" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span class="font-body-medium text-body-medium">지역 진단</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 transition-colors bg-primary text-on-primary font-body-semibold font-semibold rounded" data-path="alert-center" href="#"><span class="material-symbols-outlined text-[18px]">warning</span><span class="font-body-medium text-body-medium">경보 센터</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="regional-comparison" href="#"><span class="material-symbols-outlined text-[18px]">compare_arrows</span><span class="font-body-medium text-body-medium">지역 비교</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="prescriptions-and-reports" href="#"><span class="material-symbols-outlined text-[18px]">description</span><span class="font-body-medium text-body-medium">처방 및 리포트</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="entrepreneurship-suitability" href="#"><span class="material-symbols-outlined text-[18px]">storefront</span><span class="font-body-medium text-body-medium">창업 적합도</span></a></nav></div><div class="p-space-md border-t border-primary/20 bg-primary/30 flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-caption-regular text-caption-regular text-on-primary-container">데이터 기준</span><span class="font-caption-medium text-caption-medium text-on-primary font-semibold tabular-nums">2026. 06</span></div><div class="flex items-center gap-space-sm pt-2 border-t border-primary/20"><div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[16px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-caption-medium text-caption-medium text-on-primary truncate font-semibold">김수현</span><span class="font-caption-regular text-caption-regular text-on-primary-container truncate">영암군청 기획실</span></div></div></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md z-40 border-b border-surface-container-highest px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><span class="inline-flex items-center px-2 py-0.5 rounded border border-outline-variant bg-surface-container-low font-caption-medium text-caption-medium text-on-surface-variant font-medium">대외비 아님 / 행정업무용</span><span class="font-caption-regular text-caption-regular text-outline tabular-nums">시스템 최종 동기화: 2026-06-18 10:42 KST</span></div><div class="flex items-center gap-space-md"><button aria-label="시스템 알림" class="relative p-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="h-4 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="font-caption-medium text-caption-medium text-on-surface font-semibold">김수현 주무관</span></div></div></header><main class="w-full pt-14 bg-surface min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Operational Header Context -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-caption-medium text-caption-medium mb-1">
+<span>위험 조기경보 시스템</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary font-semibold">실시간 탐지 센터</span>
+</div>
+<div class="flex items-center gap-space-md">
+<h1 class="font-headline-page text-headline-page text-primary tracking-tight">위험 감지 경보 센터</h1>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-caption-medium text-caption-medium font-semibold animate-pulse">
+          실시간 63건 활성
+        </span>
+</div>
+</div>
+<!-- KPI Snapshot bar -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-sm bg-surface-container px-space-md py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-error text-[18px]">crisis_alert</span>
+<div class="flex flex-col">
+<span class="font-caption-regular text-caption-regular text-on-surface-variant leading-none">신규 고위험</span>
+<span class="font-body-semibold text-body-semibold text-on-surface leading-snug">34개 지자체</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container px-space-md py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">update</span>
+<div class="flex flex-col">
+<span class="font-caption-regular text-caption-regular text-on-surface-variant leading-none">최근 판정주기</span>
+<span class="font-body-semibold text-body-semibold text-on-surface leading-snug">2026 Q2 (월간)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 1. Top Control and Filter Area -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<!-- Segmented Control Chips -->
+<div class="flex items-center p-1 bg-surface-container rounded-lg gap-1">
+<button class="filter-tab px-space-md py-1.5 rounded-md font-body-semibold text-body-semibold bg-primary text-on-primary shadow-sm transition-all flex items-center gap-1.5" id="tab-all" type="button">
+<span>전체</span>
+<span class="inline-flex items-center justify-center px-1.5 py-0.2 text-[11px] rounded-full bg-surface-container-lowest/20 font-semibold">63</span>
+</button>
+<button class="filter-tab px-space-md py-1.5 rounded-md font-body-medium text-body-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all flex items-center gap-1.5" id="tab-outflow" type="button">
+<span>선행 경보</span>
+<span class="inline-flex items-center justify-center px-1.5 py-0.2 text-[11px] rounded-full bg-surface-container-high text-on-surface-variant font-semibold">34</span>
+</button>
+<button class="filter-tab px-space-md py-1.5 rounded-md font-body-medium text-body-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all flex items-center gap-1.5" id="tab-under" type="button">
+<span>과소평가</span>
+<span class="inline-flex items-center justify-center px-1.5 py-0.2 text-[11px] rounded-full bg-surface-container-high text-on-surface-variant font-semibold">20</span>
+</button>
+<button class="filter-tab px-space-md py-1.5 rounded-md font-body-medium text-body-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all flex items-center gap-1.5" id="tab-foreign" type="button">
+<span>외국인 의존</span>
+<span class="inline-flex items-center justify-center px-1.5 py-0.2 text-[11px] rounded-full bg-surface-container-high text-on-surface-variant font-semibold">9</span>
+</button>
+</div>
+<!-- Action Utilities -->
+<div class="flex items-center gap-space-sm ml-auto">
+<button class="flex items-center gap-1 px-space-sm py-1.5 text-on-surface-variant hover:text-primary font-body-medium text-body-medium transition-colors" id="btn-reset-filter" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>필터 초기화</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-body-semibold text-body-semibold shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">table_view</span>
+<span>엑셀 다운로드</span>
+</button>
+</div>
+</div>
+<!-- Secondary Filter Elements (Severity, Sido, Search) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm pt-space-xs items-center">
+<!-- Search Box -->
+<div class="md:col-span-6 relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-space-md bg-surface-container-low focus:bg-surface-container-lowest rounded-lg font-body-regular text-body-regular text-on-surface placeholder:text-outline outline-none transition-all" id="filter-search" placeholder="지역명(예: 영암군, 서천군) 또는 감지 사유 검색..." type="text"/>
+</div>
+<!-- Severity Dropdown -->
+<div class="md:col-span-3 relative">
+<select class="w-full h-9 px-space-md bg-surface-container-low text-on-surface rounded-lg font-body-medium text-body-medium outline-none appearance-none cursor-pointer" id="filter-severity">
+<option value="">전체 심각도</option>
+<option value="높음">높음 (긴급 개입)</option>
+<option value="중간">중간 (심층 모니터링)</option>
+<option value="주의">주의 (관찰 대상)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+<!-- Sido Dropdown -->
+<div class="md:col-span-3 relative">
+<select class="w-full h-9 px-space-md bg-surface-container-low text-on-surface rounded-lg font-body-medium text-body-medium outline-none appearance-none cursor-pointer" id="filter-sido">
+<option value="">전국 시·도 전체</option>
+<option value="전라남도">전라남도</option>
+<option value="충청남도">충청남도</option>
+<option value="강원특별자치도">강원특별자치도</option>
+<option value="경상북도">경상북도</option>
+<option value="전라북도">전북특별자치도</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- 2 & 3. Main Workspace: Analytical Table + Detail Drawer -->
+<div class="flex flex-col lg:flex-row gap-space-lg items-start relative min-h-[640px]">
+<!-- Analytical Data Grid Container -->
+<div class="flex-1 w-full bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-300" id="table-container">
+<div class="overflow-x-auto">
+<table class="w-full text-left" id="alert-table">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-table-header text-table-header border-b border-transparent">
+<th class="py-3 px-space-md whitespace-nowrap" scope="col">지역</th>
+<th class="py-3 px-space-sm whitespace-nowrap" scope="col">경보 종류</th>
+<th class="py-3 px-space-sm whitespace-nowrap text-center" scope="col">심각도</th>
+<th class="py-3 px-space-sm whitespace-nowrap text-center" scope="col">유형</th>
+<th class="py-3 px-space-sm whitespace-nowrap text-right" scope="col">사다리 점수</th>
+<th class="py-3 px-space-md whitespace-nowrap text-right" scope="col">세대이탈지수</th>
+<th class="py-3 px-space-md whitespace-nowrap text-right" scope="col">발생일</th>
+<th class="py-3 px-space-sm whitespace-nowrap text-center w-12" scope="col">조회</th>
+</tr>
+</thead>
+<tbody class="font-table-cell text-table-cell divide-y-0" id="table-body">
+<!-- Row 1: 전라남도 영암군 (Selected) -->
+<tr class="table-row-item cursor-pointer transition-colors bg-secondary-fixed/30 hover:bg-secondary-fixed/50" data-date="2026.06.12" data-foreign="67.2" data-ladder="2/3" data-message="영암군은 2026년 2분기 기준 세대이탈지수가 전분기 대비 3.2%p 급등하여 19.4%p에 도달했습니다. 청년층의 외식 소비가 목포시 등 인접 대도시로 대거 유출되는 조짐이 명확합니다." data-outflow="+19.4%p" data-pattern="이탈 선행형" data-region="전라남도 영암군" data-row-id="row-1" data-severity="높음" data-type="선행 경보">
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span class="font-body-semibold text-body-semibold text-primary">전라남도 영암군</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-semibold bg-error-container text-on-error-container">
+                  선행 경보
+                </span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error text-on-error text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-error animate-ping"></span>
+                  높음
+                </span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-medium bg-error-container/40 text-error">이탈 선행형</span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-right font-body-medium text-body-medium tabular-nums text-on-surface">2 / 3</td>
+<td class="py-3.5 px-space-md whitespace-nowrap text-right">
+<span class="font-body-semibold text-body-semibold text-error tabular-nums">+19.4%p</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap text-right text-outline tabular-nums">2026.06.12</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="material-symbols-outlined text-secondary text-[20px]">chevron_right</span>
+</td>
+</tr>
+<!-- Row 2: 충청남도 서천군 -->
+<tr class="table-row-item cursor-pointer transition-colors bg-surface-container-lowest hover:bg-surface-container-low" data-date="2026.06.11" data-foreign="24.5" data-ladder="1/3" data-message="서천군은 군산 및 보령 방면으로의 상권 이탈 강도가 한계점에 도달했습니다. 관내 1차 생활 서비스 사다리가 붕괴되며 소비의 60% 이상이 인근 자치단체로 유출되고 있습니다." data-outflow="+22.1%p" data-pattern="이탈 선행형" data-region="충청남도 서천군" data-row-id="row-2" data-severity="높음" data-type="선행 경보">
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span class="font-body-semibold text-body-semibold text-on-surface">충청남도 서천군</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-semibold bg-error-container text-on-error-container">
+                  선행 경보
+                </span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error text-on-error text-[11px] font-bold">높음</span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-medium bg-error-container/40 text-error">이탈 선행형</span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-right font-body-medium text-body-medium tabular-nums text-on-surface">1 / 3</td>
+<td class="py-3.5 px-space-md whitespace-nowrap text-right">
+<span class="font-body-semibold text-body-semibold text-error tabular-nums">+22.1%p</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap text-right text-outline tabular-nums">2026.06.11</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</td>
+</tr>
+<!-- Row 3: 전라남도 영암군 삼호읍 배후 -->
+<tr class="table-row-item cursor-pointer transition-colors bg-surface-container-lowest hover:bg-surface-container-low" data-date="2026.06.10" data-foreign="78.9" data-ladder="2/3" data-message="삼호 조선업 배후권역은 내국인 생산인구 급감에 따른 급속한 외국인 노동자 중심 상권 개편이 감지되었습니다. 전통적인 지역 정주 소비 기반과의 연계성이 급속 단절되는 상태입니다." data-outflow="+18.7%p" data-pattern="이탈 선행형" data-region="전라남도 영암군 삼호읍 배후" data-row-id="row-3" data-severity="높음" data-type="외국인 의존">
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span class="font-body-semibold text-body-semibold text-on-surface">영암군 삼호읍 배후</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+                  외국인 의존
+                </span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error text-on-error text-[11px] font-bold">높음</span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-medium bg-error-container/40 text-error">이탈 선행형</span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-right font-body-medium text-body-medium tabular-nums text-on-surface">2 / 3</td>
+<td class="py-3.5 px-space-md whitespace-nowrap text-right">
+<span class="font-body-semibold text-body-semibold text-error tabular-nums">+18.7%p</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap text-right text-outline tabular-nums">2026.06.10</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</td>
+</tr>
+<!-- Row 4: 강원특별자치도 정선군 -->
+<tr class="table-row-item cursor-pointer transition-colors bg-surface-container-lowest hover:bg-surface-container-low" data-date="2026.06.09" data-foreign="14.2" data-ladder="0/3" data-message="기존 통계지표 상 안정권으로 분류되었으나, 관내 필수 의료 및 핵심 유통 소매점이 전무하여 기초 생활권 기능이 붕괴 직전에 직면한 상태입니다." data-outflow="+5.2%p" data-pattern="기능 결손형" data-region="강원특별자치도 정선군" data-row-id="row-4" data-severity="중간" data-type="과소평가">
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-semibold text-body-semibold text-on-surface">강원특별자치도 정선군</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-semibold bg-secondary-fixed text-on-secondary-fixed">
+                  과소평가
+                </span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant text-[11px] font-semibold">중간</span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-medium bg-tertiary-fixed/60 text-tertiary">기능 결손형</span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-right font-body-medium text-body-medium tabular-nums text-on-surface">0 / 3</td>
+<td class="py-3.5 px-space-md whitespace-nowrap text-right">
+<span class="font-body-semibold text-body-semibold text-on-surface tabular-nums">+5.2%p</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap text-right text-outline tabular-nums">2026.06.09</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</td>
+</tr>
+<!-- Row 5: 경상북도 영덕군 -->
+<tr class="table-row-item cursor-pointer transition-colors bg-surface-container-lowest hover:bg-surface-container-low" data-date="2026.06.08" data-foreign="28.1" data-ladder="0/3" data-message="세대이탈지수가 포항 배후 통근권 및 관광 소비 공동화로 인해 전국 최고 수준(+26.4%p)으로 상승했습니다. 상업 사다리 3단계 모두 결손된 복합 위험 구역입니다." data-outflow="+26.4%p" data-pattern="복합 소멸형" data-region="경상북도 영덕군" data-row-id="row-5" data-severity="높음" data-type="선행 경보">
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span class="font-body-semibold text-body-semibold text-on-surface">경상북도 영덕군</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-semibold bg-error-container text-on-error-container">
+                  선행 경보
+                </span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error text-on-error text-[11px] font-bold">높음</span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-medium bg-primary-container text-on-primary">복합 소멸형</span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-right font-body-medium text-body-medium tabular-nums text-on-surface">0 / 3</td>
+<td class="py-3.5 px-space-md whitespace-nowrap text-right">
+<span class="font-body-semibold text-body-semibold text-error tabular-nums">+26.4%p</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap text-right text-outline tabular-nums">2026.06.08</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</td>
+</tr>
+<!-- Row 6: 전북특별자치도 고창군 -->
+<tr class="table-row-item cursor-pointer transition-colors bg-surface-container-lowest hover:bg-surface-container-low" data-date="2026.06.07" data-foreign="19.8" data-ladder="2/3" data-message="유지형으로 분류되어 있으나 인접 정읍 및 광주권으로의 야간 문화·레저 소비 유출 쏠림이 확대되며 완만한 이탈 징후가 포착되었습니다." data-outflow="+7.4%p" data-pattern="유지형" data-region="전북특별자치도 고창군" data-row-id="row-6" data-severity="중간" data-type="과소평가">
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-semibold text-body-semibold text-on-surface">전라북도 고창군</span>
+</div>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-semibold bg-secondary-fixed text-on-secondary-fixed">
+                  과소평가
+                </span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant text-[11px] font-semibold">중간</span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-medium bg-surface-variant text-on-surface-variant">유지형</span>
+</td>
+<td class="py-3.5 px-space-sm whitespace-nowrap text-right font-body-medium text-body-medium tabular-nums text-on-surface">2 / 3</td>
+<td class="py-3.5 px-space-md whitespace-nowrap text-right">
+<span class="font-body-semibold text-body-semibold text-on-surface tabular-nums">+7.4%p</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap text-right text-outline tabular-nums">2026.06.07</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination and Metadata Footer -->
+<div class="flex items-center justify-between px-space-md py-3 bg-surface-container-low text-on-surface-variant font-caption-regular text-caption-regular">
+<span>총 63건 중 1-6 표시</span>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<span class="px-2 font-caption-medium text-caption-medium text-on-surface">1 / 11</span>
+<button class="w-7 h-7 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 3. Right Slide Detail Drawer (440px wide) -->
+<aside class="w-full lg:w-[440px] shrink-0 bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-md transition-all" id="detail-drawer">
+<!-- Drawer Top Header -->
+<div class="flex items-start justify-between pb-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-error"></span>
+<h2 class="font-headline-section text-headline-section font-bold text-primary" id="drawer-region-title">전라남도 영암군</h2>
+</div>
+<div class="flex items-center gap-2 mt-1 text-outline font-caption-regular text-caption-regular">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span id="drawer-timestamp">2026.06.12 09:20 (3시간 전 감지)</span>
+</div>
+</div>
+<button aria-label="상세 패널 닫기" class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" id="btn-close-drawer" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Alert Full Text Message Box -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-error font-body-semibold text-body-semibold">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+<span>진단 엔진 자동 판독 소견</span>
+</div>
+<p class="font-body-regular text-body-regular text-on-surface leading-relaxed" id="drawer-message">
+          영암군은 2026년 2분기 기준 세대이탈지수가 전분기 대비 3.2%p 급등하여 19.4%p에 도달했습니다. 청년층의 외식 소비가 목포시 등 인접 대도시로 대거 유출되는 조짐이 명확합니다.
+        </p>
+</div>
+<!-- 3 Key Evidence Diagnostic Chips -->
+<div class="flex flex-col gap-2">
+<span class="font-caption-medium text-caption-medium text-on-surface-variant font-semibold">핵심 근거 지표 요약</span>
+<div class="grid grid-cols-1 gap-2">
+<!-- Evidence 1 -->
+<div class="p-2.5 bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[18px]">trending_up</span>
+<span class="font-body-medium text-body-medium text-on-surface">세대이탈지수</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded font-caption-medium text-caption-medium bg-error-container text-on-error-container font-bold">
+              19.4%p (경보선 초과)
+            </span>
+</div>
+<!-- Evidence 2 -->
+<div class="p-2.5 bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">stairs</span>
+<span class="font-body-medium text-body-medium text-on-surface">상업 사다리 점수</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded font-caption-medium text-caption-medium bg-surface-container-high text-on-surface font-semibold">
+              사다리 2/3 (갈비전문점 결손)
+            </span>
+</div>
+<!-- Evidence 3 -->
+<div class="p-2.5 bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">output</span>
+<span class="font-body-medium text-body-medium text-on-surface">청년층 외식 유출율</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded font-caption-medium text-caption-medium bg-secondary-fixed text-on-secondary-fixed font-semibold">
+              42.8% (목포 쏠림)
+            </span>
+</div>
+</div>
+</div>
+<!-- Foreign Dependency Horizontal Gauge Chart -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">groups</span>
+<span class="font-body-semibold text-body-semibold text-primary">외국인 의존 경보 세부 분석</span>
+</div>
+<span class="font-caption-regular text-caption-regular text-outline">배후 산단 영향</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-baseline">
+<span class="font-caption-medium text-caption-medium text-on-surface-variant">20~30대 소비 중 외국인 비중</span>
+<span class="font-headline-section text-headline-section font-bold text-primary tabular-nums" id="drawer-foreign-percent">67.2%</span>
+</div>
+<span class="font-caption-regular text-caption-regular text-outline">대형 조선업 배후단지(현대삼호 등) 상권 구조 급변</span>
+</div>
+<!-- Custom Gauge Bar with Threshold Line -->
+<div class="relative pt-6 pb-2 w-full">
+<!-- Benchmark Tag at 11.3% -->
+<div class="absolute top-0 left-[11.3%] -translate-x-1/2 flex flex-col items-center">
+<span class="font-caption-regular text-[10px] text-error font-semibold whitespace-nowrap">전국 중앙값 11.3%</span>
+<div class="w-2 h-2 rotate-45 bg-error mt-0.5"></div>
+</div>
+<!-- Gauge Track Background -->
+<div class="w-full h-3 bg-surface-dim rounded-full overflow-hidden relative">
+<!-- Filled Progress Bar -->
+<div class="h-full bg-secondary transition-all duration-700 rounded-full" id="drawer-gauge-bar" style="width: 67.2%"></div>
+</div>
+<!-- Benchmark Vertical Line overlaid on bar -->
+<div class="absolute top-4 bottom-2 left-[11.3%] w-0.5 bg-error z-10 pointer-events-none"></div>
+<!-- Scale labels -->
+<div class="flex justify-between text-[11px] text-outline font-caption-regular pt-1 tabular-nums">
+<span>0%</span>
+<span class="text-error font-semibold">11.3% (기준선)</span>
+<span>50%</span>
+<span>100%</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons Group -->
+<div class="flex flex-col gap-2 pt-space-xs mt-auto">
+<a class="w-full h-10 bg-primary hover:bg-primary-container text-on-primary rounded-lg font-body-semibold text-body-semibold flex items-center justify-center gap-2 shadow-sm transition-colors" data-path="regional-diagnosis" href="#">
+<span>지역 진단 상세로 이동</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-9 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-body-medium text-body-medium flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">assignment_add</span>
+<span>리포트 생성</span>
+</button>
+<button class="h-9 hover:bg-error-container/20 text-error rounded-lg font-body-medium text-body-medium flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">rule_folder</span>
+<span>경보 임시 해제</span>
+</button>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  (function() {
+    // Interactive Elements Selection
+    const rows = document.querySelectorAll('.table-row-item');
+    const drawer = document.getElementById('detail-drawer');
+    const closeBtn = document.getElementById('btn-close-drawer');
+    
+    // Drawer Content Fields
+    const titleElem = document.getElementById('drawer-region-title');
+    const msgElem = document.getElementById('drawer-message');
+    const timestampElem = document.getElementById('drawer-timestamp');
+    const foreignPctElem = document.getElementById('drawer-foreign-percent');
+    const gaugeBarElem = document.getElementById('drawer-gauge-bar');
+
+    // Filter Elements
+    const searchInput = document.getElementById('filter-search');
+    const severitySelect = document.getElementById('filter-severity');
+    const sidoSelect = document.getElementById('filter-sido');
+    const resetBtn = document.getElementById('btn-reset-filter');
+    const tabs = document.querySelectorAll('.filter-tab');
+    let currentTab = '전체';
+
+    // Click handler for Table Rows
+    rows.forEach(row => {
+      row.addEventListener('click', function() {
+        // Highlight logic
+        rows.forEach(r => {
+          r.classList.remove('bg-secondary-fixed/30', 'hover:bg-secondary-fixed/50');
+          r.classList.add('bg-surface-container-lowest', 'hover:bg-surface-container-low');
+          const title = r.querySelector('.font-body-semibold');
+          if (title) {
+            title.classList.remove('text-primary');
+            title.classList.add('text-on-surface');
+          }
+        });
+
+        this.classList.remove('bg-surface-container-lowest', 'hover:bg-surface-container-low');
+        this.classList.add('bg-secondary-fixed/30', 'hover:bg-secondary-fixed/50');
+        const activeTitle = this.querySelector('.font-body-semibold');
+        if (activeTitle) {
+          activeTitle.classList.remove('text-on-surface');
+          activeTitle.classList.add('text-primary');
+        }
+
+        // Populate Drawer
+        const region = this.getAttribute('data-region') || '';
+        const msg = this.getAttribute('data-message') || '';
+        const date = this.getAttribute('data-date') || '';
+        const foreign = this.getAttribute('data-foreign') || '11.3';
+
+        titleElem.textContent = region;
+        msgElem.textContent = msg;
+        timestampElem.textContent = date + " 09:20 (확인 완료)";
+        foreignPctElem.textContent = foreign + "%";
+        gaugeBarElem.style.width = Math.min(parseFloat(foreign), 100) + "%";
+
+        // Show Drawer if closed
+        if (drawer.classList.contains('hidden')) {
+          drawer.classList.remove('hidden');
+        }
+      });
+    });
+
+    // Close Drawer
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        drawer.classList.add('hidden');
+      });
+    }
+
+    // Segmented Tabs Filtering
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        tabs.forEach(t => {
+          t.classList.remove('bg-primary', 'text-on-primary', 'font-body-semibold', 'shadow-sm');
+          t.classList.add('text-on-surface-variant', 'font-body-medium');
+          const counter = t.querySelector('span:last-child');
+          if (counter) {
+            counter.classList.remove('bg-surface-container-lowest/20');
+            counter.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+          }
+        });
+
+        this.classList.add('bg-primary', 'text-on-primary', 'font-body-semibold', 'shadow-sm');
+        this.classList.remove('text-on-surface-variant', 'font-body-medium');
+        const activeCounter = this.querySelector('span:last-child');
+        if (activeCounter) {
+          activeCounter.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+          activeCounter.classList.add('bg-surface-container-lowest/20', 'text-on-primary');
+        }
+
+        currentTab = this.querySelector('span:first-child').textContent.trim();
+        applyFilters();
+      });
+    });
+
+    // Filter Logic
+    function applyFilters() {
+      const searchVal = (searchInput.value || '').trim().toLowerCase();
+      const severityVal = severitySelect.value;
+      const sidoVal = sidoSelect.value;
+
+      rows.forEach(row => {
+        const region = (row.getAttribute('data-region') || '').toLowerCase();
+        const msg = (row.getAttribute('data-message') || '').toLowerCase();
+        const type = row.getAttribute('data-type') || '';
+        const severity = row.getAttribute('data-severity') || '';
+
+        const matchTab = (currentTab === '전체') || (type === currentTab);
+        const matchSearch = !searchVal || region.includes(searchVal) || msg.includes(searchVal);
+        const matchSeverity = !severityVal || severity === severityVal;
+        const matchSido = !sidoVal || region.includes(sidoVal);
+
+        if (matchTab && matchSearch && matchSeverity && matchSido) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    // Bind Filter inputs
+    if (searchInput) searchInput.addEventListener('input', applyFilters);
+    if (severitySelect) severitySelect.addEventListener('change', applyFilters);
+    if (sidoSelect) sidoSelect.addEventListener('change', applyFilters);
+
+    // Reset filters
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        searchInput.value = '';
+        severitySelect.value = '';
+        sidoSelect.value = '';
+        document.getElementById('tab-all').click();
+        applyFilters();
+      });
+    }
+  })();
+</script></main></div></body></html>

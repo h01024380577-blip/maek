@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#f7f9ff","on-primary-container":"#8ba4cf","on-primary-fixed-variant":"#2d476d","secondary-fixed":"#d4e3ff","error-container":"#ffdad6","primary-fixed-dim":"#aec8f4","on-secondary":"#ffffff","inverse-surface":"#27323b","on-surface-variant":"#43474e","on-surface":"#121d26","outline-variant":"#c4c6cf","primary-fixed":"#d5e3ff","surface-dim":"#d0dbe8","inverse-on-surface":"#e7f2ff","on-secondary-fixed-variant":"#004785","on-error-container":"#93000a","secondary-fixed-dim":"#a5c8ff","on-secondary-container":"#00427c","on-tertiary-container":"#e1921d","surface-variant":"#d9e4f1","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#663e00","secondary-container":"#78b0fe","tertiary-fixed":"#ffddb9","on-primary-fixed":"#001c3b","on-tertiary-fixed":"#2b1700","error":"#ba1a1a","secondary":"#1a5fa7","surface-container-highest":"#d9e4f1","surface-tint":"#465f86","primary":"#032448","primary-container":"#1f3a5f","surface-container-lowest":"#ffffff","on-primary":"#ffffff","surface-bright":"#f7f9ff","on-background":"#121d26","tertiary":"#361f00","on-error":"#ffffff","surface-container-high":"#dee9f6","tertiary-container":"#543200","background":"#f7f9ff","inverse-primary":"#aec8f4","outline":"#74777f","surface-container-low":"#ecf4ff","surface-container":"#e4effc","on-secondary-fixed":"#001c3a","tertiary-fixed-dim":"#ffb961"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"1.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2rem","space-lg":"1.5rem","gutter":"1rem"},fontFamily:{"headline-page":["Public Sans"],"headline-section":["Public Sans"],"body-semibold":["Public Sans"],"body-regular":["Public Sans"],"body-medium":["Public Sans"],"caption-regular":["Public Sans"],"table-header":["Public Sans"],"caption-medium":["Public Sans"],"display-kpi":["Public Sans"],"table-cell":["Public Sans"]},fontSize:{"headline-page":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-section":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-semibold":["14px",{lineHeight:"20px",fontWeight:"600"}],"body-regular":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-medium":["14px",{lineHeight:"20px",fontWeight:"500"}],"caption-regular":["12px",{lineHeight:"16px",fontWeight:"400"}],"table-header":["13px",{lineHeight:"18px",fontWeight:"600"}],"caption-medium":["12px",{lineHeight:"16px",fontWeight:"500"}],"display-kpi":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"table-cell":["13px",{lineHeight:"18px",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-regular text-body-regular text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[240px] bg-primary-container text-on-primary z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md border-b border-primary/20"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded bg-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-headline-section text-headline-section font-bold tracking-tight text-on-primary leading-none">맥(脈)</span><span class="font-caption-regular text-caption-regular text-on-primary-container tracking-normal mt-1">지방소멸 조기감지</span></div></div></div><nav class="flex flex-col gap-1 px-space-sm py-space-md" data-active-classes="bg-primary text-on-primary font-body-semibold font-semibold rounded"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="national-overview" href="#"><span class="material-symbols-outlined text-[18px]">public</span><span class="font-body-medium text-body-medium">전국 현황</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="regional-diagnosis" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span class="font-body-medium text-body-medium">지역 진단</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="alert-center" href="#"><span class="material-symbols-outlined text-[18px]">warning</span><span class="font-body-medium text-body-medium">경보 센터</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="regional-comparison" href="#"><span class="material-symbols-outlined text-[18px]">compare_arrows</span><span class="font-body-medium text-body-medium">지역 비교</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 transition-colors bg-primary text-on-primary font-body-semibold font-semibold rounded" data-path="prescriptions-and-reports" href="#"><span class="material-symbols-outlined text-[18px]">description</span><span class="font-body-medium text-body-medium">처방 및 리포트</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="entrepreneurship-suitability" href="#"><span class="material-symbols-outlined text-[18px]">storefront</span><span class="font-body-medium text-body-medium">창업 적합도</span></a></nav></div><div class="p-space-md border-t border-primary/20 bg-primary/30 flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-caption-regular text-caption-regular text-on-primary-container">데이터 기준</span><span class="font-caption-medium text-caption-medium text-on-primary font-semibold tabular-nums">2026. 06</span></div><div class="flex items-center gap-space-sm pt-2 border-t border-primary/20"><div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[16px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-caption-medium text-caption-medium text-on-primary truncate font-semibold">김수현</span><span class="font-caption-regular text-caption-regular text-on-primary-container truncate">영암군청 기획실</span></div></div></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md z-40 border-b border-surface-container-highest px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><span class="inline-flex items-center px-2 py-0.5 rounded border border-outline-variant bg-surface-container-low font-caption-medium text-caption-medium text-on-surface-variant font-medium">대외비 아님 / 행정업무용</span><span class="font-caption-regular text-caption-regular text-outline tabular-nums">시스템 최종 동기화: 2026-06-18 10:42 KST</span></div><div class="flex items-center gap-space-md"><button aria-label="시스템 알림" class="relative p-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="h-4 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="font-caption-medium text-caption-medium text-on-surface font-semibold">김수현 주무관</span></div></div></header><main class="w-full pt-14 bg-surface min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Context Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">policy</span>
+<span class="font-headline-page text-headline-page text-on-surface">정책 맞춤 처방 및 공문서 리포트</span>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-on-surface-variant font-caption-medium text-caption-medium">문서 생성 관리 모듈</span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-caption-regular text-caption-regular">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>행정안전부 소멸대응기금 평가지표 연계 표준 양식</span>
+</div>
+</div>
+<!-- Main 2:1 Split Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT 2/3 COLUMN: 처방 카드 (8 cols on lg) -->
+<section class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<!-- Target Region & Classification Badges -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">location_on</span>
+<span class="font-headline-section text-headline-section text-on-surface font-bold">전라남도 영암군</span>
+</div>
+<span class="h-4 w-px bg-outline-variant"></span>
+<!-- Badges -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-error-container text-on-error-container font-caption-medium text-caption-medium font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+              이탈 선행형
+            </span>
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-tertiary-container text-on-tertiary-container font-caption-medium text-caption-medium font-semibold">
+              우선순위 최상
+            </span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-caption-regular text-caption-regular text-on-surface-variant">소멸위험지수:</span>
+<span class="font-body-semibold text-body-semibold text-error tabular-nums">0.24 (고위험군)</span>
+</div>
+</div>
+<!-- Role-based Tabs -->
+<div class="flex items-center gap-2 border-b-0">
+<button class="tab-btn px-4 py-2.5 rounded-lg font-body-semibold text-body-semibold bg-primary text-on-primary shadow-sm flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+<span>지자체 정책 담당자</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-lowest/20 font-caption-regular text-caption-regular">추천 4건</span>
+</button>
+<button class="tab-btn px-4 py-2.5 rounded-lg font-body-medium text-body-medium bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+<span>로컬 창업자</span>
+</button>
+<button class="tab-btn px-4 py-2.5 rounded-lg font-body-medium text-body-medium bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+<span>제휴 카드사·소상공인 진흥원</span>
+</button>
+</div>
+<!-- Policy Recommendation Callout Box -->
+<div class="bg-surface-container-low rounded-xl p-space-lg relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-primary/5 pointer-events-none"></div>
+<div class="flex items-start gap-space-md">
+<div class="p-2 rounded-lg bg-primary text-on-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="font-body-semibold text-body-semibold text-primary font-bold">정책 권고 총평 (Policy Diagnosis)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-caption-regular text-caption-regular text-on-surface-variant">빅데이터 상관계수 0.88</span>
+</div>
+<p class="font-body-regular text-body-regular text-on-surface leading-relaxed">
+                영암군은 상권 기반(사다리 2점)이 유지되고 있으나 <span class="font-body-semibold text-body-semibold text-error underline decoration-error/30 underline-offset-4">청년 세대의 인근 대도시(목포·광주) 소비 유출</span>이 심화되어 3년 내 상권 연쇄 붕괴 위험이 있습니다. 대규모 하드웨어 인프라 신축 조성보다 <span class="font-body-semibold text-body-semibold text-primary">'청년 타겟 야간/주말 소비 앵커 프로그램'</span>과 <span class="font-body-semibold text-body-semibold text-primary">'지역화폐 차등 인센티브'</span> 도입이 시급합니다.
+              </p>
+</div>
+</div>
+<!-- Micro Sparkline & Radar Metric Strip -->
+<div class="mt-space-md pt-space-md grid grid-cols-1 sm:grid-cols-3 gap-space-sm bg-surface-container-lowest/80 rounded-lg p-space-sm">
+<div class="flex items-center justify-between px-space-sm">
+<div class="flex flex-col">
+<span class="font-caption-regular text-caption-regular text-on-surface-variant">청년층 소비유출율</span>
+<span class="font-headline-section text-headline-section text-error font-bold tabular-nums">68.4%</span>
+</div>
+<svg class="w-16 h-8 text-error" fill="none" viewbox="0 0 64 32">
+<path d="M2 28L18 20L34 24L50 10L62 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<div class="flex items-center justify-between px-space-sm">
+<div class="flex flex-col">
+<span class="font-caption-regular text-caption-regular text-on-surface-variant">상권 사다리 잔존도</span>
+<span class="font-headline-section text-headline-section text-on-surface font-bold tabular-nums">2.1 pt</span>
+</div>
+<svg class="w-16 h-8 text-secondary" fill="none" viewbox="0 0 64 32">
+<path d="M2 12L18 14L34 16L50 22L62 26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<div class="flex items-center justify-between px-space-sm">
+<div class="flex flex-col">
+<span class="font-caption-regular text-caption-regular text-on-surface-variant">소멸 골든타임</span>
+<span class="font-headline-section text-headline-section text-tertiary-container font-bold tabular-nums">34 개월</span>
+</div>
+<svg class="w-16 h-8 text-tertiary-container" fill="none" viewbox="0 0 64 32">
+<path d="M2 6L18 8L34 14L50 20L62 28" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Checklist Actions Section -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">checklist</span>
+<span class="font-headline-section text-headline-section text-on-surface font-bold">핵심 권장 조치 및 실행 매트릭스</span>
+</div>
+<span class="font-caption-regular text-caption-regular text-on-surface-variant">선택 조치는 우측 리포트의 단기 로드맵에 자동 반영됩니다</span>
+</div>
+<!-- Action Cards (Checklist 4 Items) -->
+<div class="flex flex-col gap-space-sm" id="action-checklist">
+<!-- Item 1 -->
+<div class="group flex flex-col md:flex-row md:items-center justify-between p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all gap-space-md">
+<div class="flex items-start gap-space-md flex-1">
+<label class="relative flex items-center p-1 rounded cursor-pointer mt-0.5">
+<input checked="" class="sr-only peer action-check" type="checkbox"/>
+<div class="w-5 h-5 rounded bg-surface-container-highest peer-checked:bg-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-on-primary text-[16px] scale-0 peer-checked:scale-100 transition-transform">check</span>
+</div>
+</label>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-caption-medium text-caption-medium">우선과제 01</span>
+<span class="font-body-semibold text-body-semibold text-on-surface">청년 외식 유출 방지형 로컬 크리에이터 팝업 스토어 상권 지원</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant">금·토 야간 삼호읍 중심 목포 유출 청년층(20-39세) 락인(Lock-in) 야간 스트리트 펍 &amp; 문화마켓 조성</p>
+</div>
+</div>
+<!-- Metadata Badges -->
+<div class="flex items-center gap-space-xs shrink-0 flex-wrap pl-8 md:pl-0">
+<span class="px-2 py-1 rounded bg-surface-container font-caption-medium text-caption-medium text-on-surface-variant">
+                  소요: 약 4.2억
+                </span>
+<span class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-caption-medium text-caption-medium font-semibold">
+                  일자리경제과
+                </span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-on-surface font-caption-medium text-caption-medium">
+                  2026.Q3 (6개월)
+                </span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group flex flex-col md:flex-row md:items-center justify-between p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all gap-space-md">
+<div class="flex items-start gap-space-md flex-1">
+<label class="relative flex items-center p-1 rounded cursor-pointer mt-0.5">
+<input checked="" class="sr-only peer action-check" type="checkbox"/>
+<div class="w-5 h-5 rounded bg-surface-container-highest peer-checked:bg-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-on-primary text-[16px] scale-0 peer-checked:scale-100 transition-transform">check</span>
+</div>
+</label>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-caption-medium text-caption-medium">우선과제 02</span>
+<span class="font-body-semibold text-body-semibold text-on-surface">2030대 특화 영암사랑상품권 주말 인센티브 15% 환급제 파일럿 운영</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant">금요일 18시~일요일 관내 외식·문화 가맹점 결제 시 차등 페이백 적용 (카드사 데이터 연동)</p>
+</div>
+</div>
+<!-- Metadata Badges -->
+<div class="flex items-center gap-space-xs shrink-0 flex-wrap pl-8 md:pl-0">
+<span class="px-2 py-1 rounded bg-surface-container font-caption-medium text-caption-medium text-on-surface-variant">
+                  소요: 약 6.5억
+                </span>
+<span class="px-2 py-1 rounded bg-primary-fixed text-on-primary-fixed-variant font-caption-medium text-caption-medium font-semibold">
+                  기획예산실
+                </span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-on-surface font-caption-medium text-caption-medium">
+                  2026.Q4 (단기)
+                </span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group flex flex-col md:flex-row md:items-center justify-between p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all gap-space-md">
+<div class="flex items-start gap-space-md flex-1">
+<label class="relative flex items-center p-1 rounded cursor-pointer mt-0.5">
+<input class="sr-only peer action-check" type="checkbox"/>
+<div class="w-5 h-5 rounded bg-surface-container-highest peer-checked:bg-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-on-primary text-[16px] scale-0 peer-checked:scale-100 transition-transform">check</span>
+</div>
+</label>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-caption-medium text-caption-medium">과제 03</span>
+<span class="font-body-semibold text-body-semibold text-on-surface">외국인 근로자 소비 합법 양성화 및 전통시장 다문화 특화존 연계</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant">대불산단 근로자 식음·생필품 소비의 지하화 방지 및 5일장 연계 다국적 식자재·커뮤니티 마켓</p>
+</div>
+</div>
+<!-- Metadata Badges -->
+<div class="flex items-center gap-space-xs shrink-0 flex-wrap pl-8 md:pl-0">
+<span class="px-2 py-1 rounded bg-surface-container font-caption-medium text-caption-medium text-on-surface-variant">
+                  소요: 약 2.8억
+                </span>
+<span class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-caption-medium text-caption-medium font-semibold">
+                  일자리경제과
+                </span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-on-surface font-caption-medium text-caption-medium">
+                  2027.Q1 (중기)
+                </span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="group flex flex-col md:flex-row md:items-center justify-between p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all gap-space-md">
+<div class="flex items-start gap-space-md flex-1">
+<label class="relative flex items-center p-1 rounded cursor-pointer mt-0.5">
+<input class="sr-only peer action-check" type="checkbox"/>
+<div class="w-5 h-5 rounded bg-surface-container-highest peer-checked:bg-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-on-primary text-[16px] scale-0 peer-checked:scale-100 transition-transform">check</span>
+</div>
+</label>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-caption-medium text-caption-medium">과제 04</span>
+<span class="font-body-semibold text-body-semibold text-on-surface">갈비전문점 등 사회적 외식 결손 업종 대체 거점 식음시설 유치</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant">가족 단위 외식 결손 지수 82% 대응: 공실 군유지 활용 복합 패밀리 다이닝 브랜드 임대 인센티브</p>
+</div>
+</div>
+<!-- Metadata Badges -->
+<div class="flex items-center gap-space-xs shrink-0 flex-wrap pl-8 md:pl-0">
+<span class="px-2 py-1 rounded bg-surface-container font-caption-medium text-caption-medium text-on-surface-variant">
+                  소요: 약 8.0억
+                </span>
+<span class="px-2 py-1 rounded bg-primary-fixed text-on-primary-fixed-variant font-caption-medium text-caption-medium font-semibold">
+                  기획예산실
+                </span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-on-surface font-caption-medium text-caption-medium">
+                  2027.Q2 (12개월)
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Budget & Expected Impact Summary Footer -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-md bg-surface-container-low p-space-md rounded-xl">
+<div class="flex items-center gap-space-lg flex-wrap">
+<div class="flex flex-col">
+<span class="font-caption-regular text-caption-regular text-on-surface-variant">선택 조치 총 소요 예산</span>
+<span class="font-headline-section text-headline-section text-primary font-bold tabular-nums" id="total-budget">약 10.7 억원</span>
+</div>
+<div class="h-8 w-px bg-outline-variant"></div>
+<div class="flex flex-col">
+<span class="font-caption-regular text-caption-regular text-on-surface-variant">예상 유출 방어 효과</span>
+<span class="font-headline-section text-headline-section text-secondary font-bold tabular-nums">연간 74.2 억원 회수</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-2 rounded-lg bg-surface-container-highest hover:bg-surface-container-high text-on-surface font-caption-medium text-caption-medium transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>세부 파라미터 시뮬레이션</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT 1/3 COLUMN: 리포트 미리보기 (4 cols on lg) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md sticky top-20">
+<!-- Header -->
+<div class="flex items-center justify-between pb-space-sm border-b-0">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">description</span>
+<span class="font-headline-section text-headline-section text-on-surface font-bold">리포트 미리보기</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-caption-medium text-caption-medium font-bold">A4 규격</span>
+</div>
+<!-- A4 Government Whitepaper Miniature Thumbnail -->
+<div class="relative w-full aspect-[1/1.414] bg-surface-container-lowest rounded-lg shadow-md p-4 flex flex-col justify-between overflow-hidden group select-none border-2 border-surface-container-highest">
+<!-- Top Watermark & Serial -->
+<div class="flex justify-between items-center text-[8px] text-outline font-mono">
+<span>제 2026-행정-0482호</span>
+<span>행정안전부·지방시대위원회</span>
+</div>
+<!-- Miniature Title Block -->
+<div class="flex flex-col items-center text-center my-1 gap-1">
+<div class="h-1.5 w-12 bg-primary rounded-full"></div>
+<span class="text-[11px] font-bold text-on-surface leading-tight tracking-tight">전라남도 영암군 지방소멸 위기대응<br/>상권 및 인구이탈 종합 처방보고서</span>
+<span class="text-[7px] text-on-surface-variant font-mono">2026년 6월 18일 발행 | 맥(脈) 조기감지 시스템</span>
+</div>
+<!-- Miniature Chart & Table Layout Rendering -->
+<div class="flex flex-col gap-1.5 my-1 bg-surface-container-low p-2 rounded">
+<div class="flex justify-between items-center text-[7px] font-semibold text-primary">
+<span>■ 소비유출 진단 매트릭스</span>
+<span class="text-error font-mono">-38.2%</span>
+</div>
+<!-- Miniature Bar Chart -->
+<div class="flex items-end gap-1 h-8 px-1">
+<div class="w-full bg-primary/20 h-4 rounded-t-sm"></div>
+<div class="w-full bg-primary/30 h-6 rounded-t-sm"></div>
+<div class="w-full bg-primary/50 h-5 rounded-t-sm"></div>
+<div class="w-full bg-error h-7 rounded-t-sm"></div>
+<div class="w-full bg-primary h-3 rounded-t-sm"></div>
+</div>
+<!-- Miniature Table Rows -->
+<div class="flex flex-col gap-0.5 text-[6px] text-on-surface-variant">
+<div class="flex justify-between bg-surface-container-highest px-1 py-0.5 rounded">
+<span>영암 삼호읍</span>
+<span class="font-mono text-error">이탈도 84%</span>
+</div>
+<div class="flex justify-between bg-surface-container-lowest px-1 py-0.5 rounded">
+<span>영암 영암읍</span>
+<span class="font-mono">결손도 61%</span>
+</div>
+</div>
+</div>
+<!-- Miniature Footer -->
+<div class="flex justify-between items-end text-[7px] text-outline pt-1">
+<span class="font-semibold text-primary">지방소멸위기대응기금 투자협의회 제출용</span>
+<span class="font-mono">1 / 14</span>
+</div>
+<!-- Hover Overlay with Magnify Button -->
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-caption-medium text-caption-medium shadow-md flex items-center gap-1.5 hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">fullscreen</span>
+              전체 화면 열람
+            </button>
+</div>
+</div>
+<!-- Table of Contents -->
+<div class="flex flex-col gap-2">
+<span class="font-caption-medium text-caption-medium text-on-surface-variant font-semibold">보고서 목차 (Contents)</span>
+<ol class="flex flex-col gap-1.5 text-on-surface">
+<li class="flex items-center justify-between p-1.5 rounded-md hover:bg-surface-container-low transition-colors cursor-pointer text-body-medium font-body-medium">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-4 h-4 rounded bg-primary-container text-on-primary text-[10px] flex items-center justify-center font-bold">1</span>
+<span class="truncate">요약 진단 (Executive Summary)</span>
+</div>
+<span class="font-caption-regular text-caption-regular text-outline tabular-nums">p.02</span>
+</li>
+<li class="flex items-center justify-between p-1.5 rounded-md hover:bg-surface-container-low transition-colors cursor-pointer text-body-medium font-body-medium">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-4 h-4 rounded bg-primary-container text-on-primary text-[10px] flex items-center justify-center font-bold">2</span>
+<span class="truncate">상권기능 사다리 및 세대이탈 지표 정량 분석</span>
+</div>
+<span class="font-caption-regular text-caption-regular text-outline tabular-nums">p.04</span>
+</li>
+<li class="flex items-center justify-between p-1.5 rounded-md hover:bg-surface-container-low transition-colors cursor-pointer text-body-medium font-body-medium">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-4 h-4 rounded bg-primary-container text-on-primary text-[10px] flex items-center justify-center font-bold">3</span>
+<span class="truncate">연령별 세대 소비 구조 및 외식 유출 프로파일</span>
+</div>
+<span class="font-caption-regular text-caption-regular text-outline tabular-nums">p.07</span>
+</li>
+<li class="flex items-center justify-between p-1.5 rounded-md hover:bg-surface-container-low transition-colors cursor-pointer text-body-medium font-body-medium">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-4 h-4 rounded bg-primary-container text-on-primary text-[10px] flex items-center justify-center font-bold">4</span>
+<span class="truncate">정책적 처방 및 단기·중기 로드맵</span>
+</div>
+<span class="font-caption-regular text-caption-regular text-outline tabular-nums">p.10</span>
+</li>
+<li class="flex items-center justify-between p-1.5 rounded-md hover:bg-surface-container-low transition-colors cursor-pointer text-body-medium font-body-medium">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-4 h-4 rounded bg-primary-container text-on-primary text-[10px] flex items-center justify-center font-bold">5</span>
+<span class="truncate">카드 데이터 통계 근거 및 결합 모델 메타데이터</span>
+</div>
+<span class="font-caption-regular text-caption-regular text-outline tabular-nums">p.13</span>
+</li>
+</ol>
+</div>
+<!-- Action Buttons Group -->
+<div class="flex flex-col gap-2 pt-2 border-t-0">
+<button class="w-full h-11 px-4 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-body-semibold text-body-semibold transition-all shadow-sm flex items-center justify-center gap-2 active:scale-[0.99]" id="btn-download-pdf" type="button">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span>PDF 공식 보고서 다운로드</span>
+</button>
+<button class="w-full h-11 px-4 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-secondary font-body-semibold text-body-semibold transition-all shadow-xs flex items-center justify-center gap-2" id="btn-send-email" type="button">
+<span class="material-symbols-outlined text-[20px]">forward_to_inbox</span>
+<span>소속 부서 및 단체장 보고용 메일 발송</span>
+</button>
+</div>
+<!-- Document Version & Serial Indicator -->
+<div class="flex flex-col items-center text-center p-2.5 rounded-lg bg-surface-container-low gap-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-caption-medium text-caption-medium">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span>문서 식별 번호:</span>
+<span class="font-mono font-bold text-on-surface">MAEK-2026-06-JN-YEONGAM (v1.2)</span>
+</div>
+<span class="text-[11px] text-outline font-mono">해시: SHA256:7f8a92...e41d | 위변조 검증 완료</span>
+</div>
+</div>
+</aside>
+</div>
+<!-- Interactive JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Tab Switching UI
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary', 'font-body-semibold');
+            b.classList.add('bg-surface-container-high', 'text-on-surface-variant', 'font-body-medium');
+          });
+          btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant', 'font-body-medium');
+          btn.classList.add('bg-primary', 'text-on-primary', 'font-body-semibold');
+        });
+      });
+
+      // Budget dynamic calculator based on checkboxes
+      const costs = [4.2, 6.5, 2.8, 8.0];
+      const checkboxes = document.querySelectorAll('.action-check');
+      const budgetDisplay = document.getElementById('total-budget');
+
+      function updateBudget() {
+        let total = 0;
+        checkboxes.forEach((cb, idx) => {
+          if (cb.checked) {
+            total += costs[idx];
+          }
+        });
+        if (budgetDisplay) {
+          budgetDisplay.textContent = `약 ${total.toFixed(1)} 억원`;
+        }
+      }
+
+      checkboxes.forEach(cb => {
+        cb.addEventListener('change', updateBudget);
+      });
+
+      // PDF Download Button Action
+      const pdfBtn = document.getElementById('btn-download-pdf');
+      if (pdfBtn) {
+        pdfBtn.addEventListener('click', () => {
+          const originalContent = pdfBtn.innerHTML;
+          pdfBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span><span>문서 패키징 중...</span>';
+          setTimeout(() => {
+            pdfBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span><span>다운로드 완료 (14.2 MB)</span>';
+            setTimeout(() => {
+              pdfBtn.innerHTML = originalContent;
+            }, 2500);
+          }, 1200);
+        });
+      }
+
+      // Email Modal Simulation
+      const emailBtn = document.getElementById('btn-send-email');
+      if (emailBtn) {
+        emailBtn.addEventListener('click', () => {
+          alert('영암군수실 및 기획예산실 수신처로 공식 보고서 배포 메일이 발송 큐에 등록되었습니다.');
+        });
+      }
+    });
+  </script>
+</div></main></div></body></html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#f7f9ff","on-primary-container":"#8ba4cf","on-primary-fixed-variant":"#2d476d","secondary-fixed":"#d4e3ff","error-container":"#ffdad6","primary-fixed-dim":"#aec8f4","on-secondary":"#ffffff","inverse-surface":"#27323b","on-surface-variant":"#43474e","on-surface":"#121d26","outline-variant":"#c4c6cf","primary-fixed":"#d5e3ff","surface-dim":"#d0dbe8","inverse-on-surface":"#e7f2ff","on-secondary-fixed-variant":"#004785","on-error-container":"#93000a","secondary-fixed-dim":"#a5c8ff","on-secondary-container":"#00427c","on-tertiary-container":"#e1921d","surface-variant":"#d9e4f1","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#663e00","secondary-container":"#78b0fe","tertiary-fixed":"#ffddb9","on-primary-fixed":"#001c3b","on-tertiary-fixed":"#2b1700","error":"#ba1a1a","secondary":"#1a5fa7","surface-container-highest":"#d9e4f1","surface-tint":"#465f86","primary":"#032448","primary-container":"#1f3a5f","surface-container-lowest":"#ffffff","on-primary":"#ffffff","surface-bright":"#f7f9ff","on-background":"#121d26","tertiary":"#361f00","on-error":"#ffffff","surface-container-high":"#dee9f6","tertiary-container":"#543200","background":"#f7f9ff","inverse-primary":"#aec8f4","outline":"#74777f","surface-container-low":"#ecf4ff","surface-container":"#e4effc","on-secondary-fixed":"#001c3a","tertiary-fixed-dim":"#ffb961"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"1.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2rem","space-lg":"1.5rem","gutter":"1rem"},fontFamily:{"headline-page":["Public Sans"],"headline-section":["Public Sans"],"body-semibold":["Public Sans"],"body-regular":["Public Sans"],"body-medium":["Public Sans"],"caption-regular":["Public Sans"],"table-header":["Public Sans"],"caption-medium":["Public Sans"],"display-kpi":["Public Sans"],"table-cell":["Public Sans"]},fontSize:{"headline-page":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-section":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-semibold":["14px",{lineHeight:"20px",fontWeight:"600"}],"body-regular":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-medium":["14px",{lineHeight:"20px",fontWeight:"500"}],"caption-regular":["12px",{lineHeight:"16px",fontWeight:"400"}],"table-header":["13px",{lineHeight:"18px",fontWeight:"600"}],"caption-medium":["12px",{lineHeight:"16px",fontWeight:"500"}],"display-kpi":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"table-cell":["13px",{lineHeight:"18px",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-regular text-body-regular text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[240px] bg-primary-container text-on-primary z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md border-b border-primary/20"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded bg-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-headline-section text-headline-section font-bold tracking-tight text-on-primary leading-none">맥(脈)</span><span class="font-caption-regular text-caption-regular text-on-primary-container tracking-normal mt-1">지방소멸 조기감지</span></div></div></div><nav class="flex flex-col gap-1 px-space-sm py-space-md" data-active-classes="bg-primary text-on-primary font-body-semibold font-semibold rounded"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="national-overview" href="#"><span class="material-symbols-outlined text-[18px]">public</span><span class="font-body-medium text-body-medium">전국 현황</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="regional-diagnosis" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span class="font-body-medium text-body-medium">지역 진단</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="alert-center" href="#"><span class="material-symbols-outlined text-[18px]">warning</span><span class="font-body-medium text-body-medium">경보 센터</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="regional-comparison" href="#"><span class="material-symbols-outlined text-[18px]">compare_arrows</span><span class="font-body-medium text-body-medium">지역 비교</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="prescriptions-and-reports" href="#"><span class="material-symbols-outlined text-[18px]">description</span><span class="font-body-medium text-body-medium">처방 및 리포트</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 transition-colors bg-primary text-on-primary font-body-semibold font-semibold rounded" data-path="entrepreneurship-suitability" href="#"><span class="material-symbols-outlined text-[18px]">storefront</span><span class="font-body-medium text-body-medium">창업 적합도</span></a></nav></div><div class="p-space-md border-t border-primary/20 bg-primary/30 flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-caption-regular text-caption-regular text-on-primary-container">데이터 기준</span><span class="font-caption-medium text-caption-medium text-on-primary font-semibold tabular-nums">2026. 06</span></div><div class="flex items-center gap-space-sm pt-2 border-t border-primary/20"><div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[16px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-caption-medium text-caption-medium text-on-primary truncate font-semibold">김수현</span><span class="font-caption-regular text-caption-regular text-on-primary-container truncate">영암군청 기획실</span></div></div></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md z-40 border-b border-surface-container-highest px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><span class="inline-flex items-center px-2 py-0.5 rounded border border-outline-variant bg-surface-container-low font-caption-medium text-caption-medium text-on-surface-variant font-medium">대외비 아님 / 행정업무용</span><span class="font-caption-regular text-caption-regular text-outline tabular-nums">시스템 최종 동기화: 2026-06-18 10:42 KST</span></div><div class="flex items-center gap-space-md"><button aria-label="시스템 알림" class="relative p-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="h-4 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="font-caption-medium text-caption-medium text-on-surface font-semibold">김수현 주무관</span></div></div></header><main class="w-full pt-14 bg-surface min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full items-center py-space-xl">
+<!-- Centered Single Column Workspace (Max 880px) -->
+<div class="w-full max-w-[880px] flex flex-col gap-space-xl">
+<!-- 1. Header Section -->
+<header class="flex flex-col items-center text-center gap-space-sm pt-space-sm">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-caption-medium text-caption-medium">
+<span class="material-symbols-outlined text-[16px]">insights</span>
+<span>소상공인 및 청년 창업자 전용 공공데이터 뷰</span>
+</div>
+<h1 class="font-headline-page text-[28px] leading-[36px] font-bold text-primary tracking-tight">
+        창업 적합도 진단
+      </h1>
+<p class="font-body-medium text-[15px] leading-[22px] text-on-surface-variant max-w-xl">
+        지역과 희망 업종을 선택하시면 카드 빅데이터 기반의 실질 소비 적합도를 즉시 분석해 드립니다.
+      </p>
+</header>
+<!-- 2. Input & Query Form Card -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm flex flex-col gap-6">
+<div class="flex items-center justify-between pb-4 bg-surface-container-low/50 -mx-8 -mt-8 px-8 pt-6 rounded-t-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">manage_search</span>
+<span class="font-headline-section text-headline-section text-on-surface font-semibold">진단 조건 설정</span>
+</div>
+<span class="font-caption-regular text-caption-regular text-outline">최근 90일 소비패턴 실시간 연동</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Region Selector -->
+<div class="flex flex-col gap-2">
+<label class="font-body-semibold text-body-semibold text-on-surface flex items-center gap-1.5" for="regionSelect">
+<span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+<span>분석 희망 지역</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 pl-3.5 pr-10 bg-surface-container-low text-on-surface font-body-medium text-body-medium rounded-lg appearance-none cursor-pointer focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="regionSelect">
+<option selected="" value="jeonnam-yeongam-samho">전라남도 영암군 삼호읍</option>
+<option value="jeonnam-yeongam-yeongam">전라남도 영암군 영암읍</option>
+<option value="jeonnam-yeongam-gunseo">전라남도 영암군 군서면</option>
+<option value="jeonnam-haenam-haenam">전라남도 해남군 해남읍</option>
+<option value="jeonbuk-buan-buan">전북특별자치도 부안군 부안읍</option>
+<option value="gyeongbuk-uiseong-uiseong">경상북도 의성군 의성읍</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Industry Selector -->
+<div class="flex flex-col gap-2">
+<label class="font-body-semibold text-body-semibold text-on-surface flex items-center gap-1.5" for="industrySelect">
+<span class="material-symbols-outlined text-[18px] text-primary">restaurant</span>
+<span>희망 창업 업종</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 pl-3.5 pr-10 bg-surface-container-low text-on-surface font-body-medium text-body-medium rounded-lg appearance-none cursor-pointer focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="industrySelect">
+<option selected="" value="meat-grill">한식 및 육류 구이 전문점 (갈비/삼겹살)</option>
+<option value="cafe-bakery">브런치 &amp; 베이커리 카페</option>
+<option value="convenience-fast">간이식 &amp; 패스트푸드 테이크아웃</option>
+<option value="leisure-fitness">체육시설 및 실내 스크린골프</option>
+<option value="medical-pharmacy">가정의학과 및 조제약국</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full h-12 bg-primary-container hover:bg-primary text-on-primary font-body-semibold text-body-semibold rounded-lg flex items-center justify-center gap-2 shadow-sm transition-colors mt-2" id="analyzeBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">troubleshoot</span>
+<span>데이터 기반 적합도 진단하기</span>
+</button>
+</section>
+<!-- 3. Diagnosis Result Section Card -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm flex flex-col gap-8">
+<!-- Top Judgment Badge & Verdict Banner -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-4">
+<!-- Orange Conditional Recommendation Badge -->
+<div class="px-4 py-2 bg-[#D68910] text-on-tertiary font-headline-section text-[20px] leading-[26px] font-bold rounded-lg shadow-sm shrink-0 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+<span>조건부 권장</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-body-semibold text-body-semibold text-on-surface">종합 진단 스코어</span>
+<span class="font-headline-section text-headline-section font-bold text-[#D68910] tabular-nums">71.8점</span>
+<span class="font-caption-regular text-caption-regular text-outline">/ 100점</span>
+</div>
+<span class="font-caption-regular text-caption-regular text-on-surface-variant">대상지: 전남 영암군 삼호읍 · 한식/육류구이군</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-primary font-caption-medium text-caption-medium bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+<span>공급 대비 수요 공백 지수: <strong class="font-semibold text-secondary tabular-nums">+34.2%</strong></span>
+</div>
+</div>
+<!-- Verdict Summary 3 Points -->
+<div class="flex flex-col gap-3">
+<h3 class="font-headline-section text-headline-section text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">assignment_turned_in</span>
+<span>핵심 입지 판정 요약</span>
+</h3>
+<div class="grid grid-cols-1 gap-2.5">
+<!-- Summary Item 1 -->
+<div class="flex items-start gap-3 p-3.5 rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-caption-medium text-caption-medium shrink-0 mt-0.5">1</span>
+<p class="font-body-regular text-body-regular text-on-surface leading-relaxed">
+              해당 지역은 상위 기능 업종인 <strong class="font-body-semibold text-primary">‘갈비전문점’이 소실</strong>되어 상권 내 공급 공백이 뚜렷합니다.
+            </p>
+</div>
+<!-- Summary Item 2 -->
+<div class="flex items-start gap-3 p-3.5 rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<span class="w-6 h-6 rounded-full bg-[#D68910] text-on-tertiary flex items-center justify-center font-caption-medium text-caption-medium shrink-0 mt-0.5">2</span>
+<p class="font-body-regular text-body-regular text-on-surface leading-relaxed">
+              단, 2030 세대 소비 유출이 심하므로, <strong class="font-body-semibold text-primary">고령층 및 산업단지 근로자 타겟의 가성비 회식 메뉴</strong> 구성이 필수적입니다.
+            </p>
+</div>
+<!-- Summary Item 3 -->
+<div class="flex items-start gap-3 p-3.5 rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<span class="w-6 h-6 rounded-full bg-outline-variant text-on-surface flex items-center justify-center font-caption-medium text-caption-medium shrink-0 mt-0.5">3</span>
+<p class="font-body-regular text-body-regular text-on-surface leading-relaxed">
+              인근 목포 상권과의 <strong class="font-body-semibold text-primary">가격 및 콘셉트 경쟁력 차별화</strong>가 입지 성공의 핵심 요소입니다.
+            </p>
+</div>
+</div>
+</div>
+<!-- 2-Column Analytical Charts -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg pt-2">
+<!-- Left: Donut Chart - Consuming Generations -->
+<div class="flex flex-col gap-4 p-5 rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">pie_chart</span>
+<h4 class="font-body-semibold text-body-semibold text-on-surface">이 지역에 남아 있는 소비 세대</h4>
+</div>
+<span class="font-caption-regular text-caption-regular text-outline">실 결제 비중</span>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-6 py-2">
+<!-- Inline SVG Donut Chart -->
+<div class="relative w-36 h-36 shrink-0 flex items-center justify-center">
+<svg aria-label="소비 세대 구성 도넛 차트" class="w-36 h-36 transform -rotate-90" viewbox="0 0 100 100">
+<!-- Total circumference = 2 * PI * 40 = 251.32 -->
+<!-- 60대 이상: 41.2% -> stroke-dasharray: 103.54 251.32, offset: 0 -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#1F3A5F" stroke-dasharray="103.54 251.32" stroke-dashoffset="0" stroke-width="16"></circle>
+<!-- 50대: 28.5% -> length: 71.62, offset: -103.54 -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#465F86" stroke-dasharray="71.62 251.32" stroke-dashoffset="-103.54" stroke-width="16"></circle>
+<!-- 40대: 16.3% -> length: 40.96, offset: -175.16 -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#78B0FE" stroke-dasharray="40.96 251.32" stroke-dashoffset="-175.16" stroke-width="16"></circle>
+<!-- 2030대: 14.0% -> length: 35.18, offset: -216.12 -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#D0DBE8" stroke-dasharray="35.18 251.32" stroke-dashoffset="-216.12" stroke-width="16"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center pointer-events-none">
+<span class="font-caption-regular text-caption-regular text-on-surface-variant">주력 계층</span>
+<span class="font-body-semibold text-body-semibold text-primary">5060+</span>
+</div>
+</div>
+<!-- Legend & Stats -->
+<div class="flex flex-col gap-2 w-full">
+<div class="flex items-center justify-between text-body-regular text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary-container shrink-0"></span>
+<span class="font-body-medium text-body-medium">60대 이상</span>
+</div>
+<span class="font-body-semibold text-body-semibold tabular-nums text-primary">41.2%</span>
+</div>
+<div class="flex items-center justify-between text-body-regular text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-surface-tint shrink-0"></span>
+<span class="font-body-medium text-body-medium">50대</span>
+</div>
+<span class="font-body-semibold text-body-semibold tabular-nums text-on-surface">28.5%</span>
+</div>
+<div class="flex items-center justify-between text-body-regular text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary-container shrink-0"></span>
+<span class="font-body-medium text-body-medium">40대</span>
+</div>
+<span class="font-body-semibold text-body-semibold tabular-nums text-on-surface">16.3%</span>
+</div>
+<div class="flex items-center justify-between text-body-regular text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-surface-dim shrink-0"></span>
+<span class="font-body-medium text-body-medium text-on-surface-variant">2030대</span>
+</div>
+<span class="font-body-semibold text-body-semibold tabular-nums text-outline">14.0%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Missing Industries TOP 3 -->
+<div class="flex flex-col gap-3 p-5 rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">inventory_2</span>
+<h4 class="font-body-semibold text-body-semibold text-on-surface">상권 내 공백 업종 TOP 3</h4>
+</div>
+<span class="font-caption-regular text-caption-regular text-[#D68910] font-semibold">수요유출 심각</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Rank 1 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm flex items-start gap-3">
+<span class="w-6 h-6 rounded bg-primary text-on-primary font-caption-medium text-caption-medium font-bold flex items-center justify-center shrink-0">1</span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate">갈비·육류 구이 전문점</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-caption-medium text-[11px] font-semibold">결손</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant mt-0.5">
+                  상위 기능 소실로 원거리 원정 소비 발생 중
+                </p>
+</div>
+</div>
+<!-- Rank 2 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm flex items-start gap-3">
+<span class="w-6 h-6 rounded bg-surface-variant text-primary font-caption-medium text-caption-medium font-bold flex items-center justify-center shrink-0">2</span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate">브런치·베이커리 카페</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary font-caption-medium text-[11px] font-semibold">유출</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant mt-0.5">
+                  2030 청년층의 주말 외부 유출 1위 원인
+                </p>
+</div>
+</div>
+<!-- Rank 3 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm flex items-start gap-3">
+<span class="w-6 h-6 rounded bg-surface-variant text-primary font-caption-medium text-caption-medium font-bold flex items-center justify-center shrink-0">3</span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate">소아·청소년 전문 의원/약국</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-caption-medium text-[11px] font-semibold">부재</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant mt-0.5">
+                  가족 단위 필수 편의 기능 결손
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer within Card -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 bg-surface-container-low/40 -mx-8 -mb-8 px-8 py-5 rounded-b-xl">
+<div class="flex items-center gap-2 text-on-surface-variant font-caption-medium text-caption-medium">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>영암군 청년창업자 상생금융 지원 협약 사업장 매칭 가능</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-body-semibold text-body-semibold rounded-lg shadow-sm transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>간이 상권 분석서 (PDF)</span>
+</button>
+<button class="px-4 py-2 bg-primary hover:bg-primary-container text-on-primary font-body-semibold text-body-semibold rounded-lg shadow-sm transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>지자체 소상공인지원팀 연결</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 4. Bottom Gray Notice Box -->
+<footer class="p-5 rounded-xl bg-surface-container text-on-surface-variant flex items-start gap-3 shadow-sm">
+<span class="material-symbols-outlined text-outline text-[20px] shrink-0 mt-0.5">info</span>
+<p class="font-caption-regular text-caption-regular leading-relaxed">
+        ※ 본 진단은 신한·KB·BC 등 주요 카드사 소비 데이터에 기반한 행정 참고용 통계 정보이며, 특정 매장의 실제 매출이나 창업 성공을 보증하지 않습니다. 세부 인허가 및 상권 조사는 관할 지자체 담당 부서와 상의하시기 바랍니다.
+      </p>
+</footer>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for the diagnose button
+  document.getElementById('analyzeBtn')?.addEventListener('click', function () {
+    const originalText = this.innerHTML;
+    this.disabled = true;
+    this.innerHTML = `
+      <span class="material-symbols-outlined animate-spin text-[20px]">sync</span>
+      <span>빅데이터 소비 유출입 패턴 재연산 중...</span>
+    `;
+    setTimeout(() => {
+      this.disabled = false;
+      this.innerHTML = originalText;
+    }, 600);
+  });
+</script></main></div></body></html>

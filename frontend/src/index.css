@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /*
+      세로 리듬. 900px 높이 화면에서 최솟값이고, 화면이 높을수록 천천히
+      늘어난다. 가로 폭을 1200px 로 묶어 두었기 때문에 높은 모니터에서는
+      세로 여백이 같이 자라야 블록이 납작해 보이지 않는다.
+    */
+    --gutter: clamp(12px, 1.35vh, 20px);
+    --pad: clamp(12px, 1.35vh, 18px);
+    --pad-sm: clamp(10px, 1.1vh, 16px);
+    --row: clamp(6px, 0.66vh, 10px);
+  }
+  html, body, #root { margin: 0; padding: 0; height: 100%; }
+  body {
+    @apply bg-surface text-on-surface font-sans text-body-regular antialiased;
+    /* 한국어 줄바꿈이 음절 중간에서 끊기지 않게 한다 (DESIGN.md) */
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    /* Plex 의 숫자 형태(sans 기본 '1'·'0')와 한글 조합 시 자간을 살짝 조인다 */
+    font-feature-settings: 'ss01' 0, 'kern' 1;
+  }
+  ::selection { background: #dbe8fa; color: #0f3f78; }
+  /* 모든 수치는 자릿수가 세로로 맞아야 표가 읽힌다 */
+  .tabular { font-variant-numeric: tabular-nums; }
+  /* 흰 바탕에서 기본 스크롤바 회색이 튀지 않게 얇게 */
+  * { scrollbar-width: thin; scrollbar-color: #cdd3da transparent; }
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  /*
+    Zero-Shadow Architectural Model — 그림자 대신 1px 경계선으로 층을 나눈다.
+    흰 카드가 연회색 캔버스 위에 놓이고, 경계선은 캔버스보다 한 단계 진해
+    카드 윤곽이 또렷이 잡힌다.
+  */
+  .panel {
+    @apply bg-surface-container-lowest border border-surface-container-highest rounded-lg;
+    /*
+      fill-mode 는 backwards 로 둔다. forwards/both 로 두면 애니메이션이 끝난 뒤에도
+      transform 이 "적용 중"으로 남아 패널이 stacking context 를 만들고, 그 안의
+      드롭다운(지역 검색)이 다음 패널 아래로 깔려 잘려 보인다.
+    */
+    animation: panel-in 0.32s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  }
+  /* KPI 줄처럼 나란히 놓인 카드는 살짝 시차를 두고 뜬다 */
+  .panel:nth-child(2) { animation-delay: 40ms; }
+  .panel:nth-child(3) { animation-delay: 80ms; }
+  .panel:nth-child(4) { animation-delay: 120ms; }
+  /* 패널 안의 한 단계 낮은 상자. 지표 묶음·보조 설명에 쓴다 */
+  .tile {
+    @apply rounded border border-surface-container-highest bg-surface-container-low;
+  }
+  /* 아이콘 하나와 한두 줄 설명이 붙는 판독문 띠 */
+  .note {
+    @apply tile flex items-start gap-1.5 px-2.5 py-1.5 text-caption-regular text-on-surface-variant;
+  }
+  /* 표 행. 흰 행 위에 아주 옅은 회색 호버, 선택 행은 남색 틴트 */
+  .row-hover { @apply transition-colors hover:bg-surface-container-low; }
+}
+
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .panel { animation: none; }
+}
+
+/* 인쇄 시 사이드바·상단바를 빼고 본문만 A4 에 앉힌다 */
+@media print {
+  aside, header { display: none !important; }
+  main { padding: 0 !important; }
+  .pl-\[240px\] { padding-left: 0 !important; }
+  .panel { animation: none; break-inside: avoid; }
+  body { background: #fff; }
+}

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#f7f9ff","on-primary-container":"#8ba4cf","on-primary-fixed-variant":"#2d476d","secondary-fixed":"#d4e3ff","error-container":"#ffdad6","primary-fixed-dim":"#aec8f4","on-secondary":"#ffffff","inverse-surface":"#27323b","on-surface-variant":"#43474e","on-surface":"#121d26","outline-variant":"#c4c6cf","primary-fixed":"#d5e3ff","surface-dim":"#d0dbe8","inverse-on-surface":"#e7f2ff","on-secondary-fixed-variant":"#004785","on-error-container":"#93000a","secondary-fixed-dim":"#a5c8ff","on-secondary-container":"#00427c","on-tertiary-container":"#e1921d","surface-variant":"#d9e4f1","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#663e00","secondary-container":"#78b0fe","tertiary-fixed":"#ffddb9","on-primary-fixed":"#001c3b","on-tertiary-fixed":"#2b1700","error":"#ba1a1a","secondary":"#1a5fa7","surface-container-highest":"#d9e4f1","surface-tint":"#465f86","primary":"#032448","primary-container":"#1f3a5f","surface-container-lowest":"#ffffff","on-primary":"#ffffff","surface-bright":"#f7f9ff","on-background":"#121d26","tertiary":"#361f00","on-error":"#ffffff","surface-container-high":"#dee9f6","tertiary-container":"#543200","background":"#f7f9ff","inverse-primary":"#aec8f4","outline":"#74777f","surface-container-low":"#ecf4ff","surface-container":"#e4effc","on-secondary-fixed":"#001c3a","tertiary-fixed-dim":"#ffb961"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"1.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2rem","space-lg":"1.5rem","gutter":"1rem"},fontFamily:{"headline-page":["Public Sans"],"headline-section":["Public Sans"],"body-semibold":["Public Sans"],"body-regular":["Public Sans"],"body-medium":["Public Sans"],"caption-regular":["Public Sans"],"table-header":["Public Sans"],"caption-medium":["Public Sans"],"display-kpi":["Public Sans"],"table-cell":["Public Sans"]},fontSize:{"headline-page":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-section":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-semibold":["14px",{lineHeight:"20px",fontWeight:"600"}],"body-regular":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-medium":["14px",{lineHeight:"20px",fontWeight:"500"}],"caption-regular":["12px",{lineHeight:"16px",fontWeight:"400"}],"table-header":["13px",{lineHeight:"18px",fontWeight:"600"}],"caption-medium":["12px",{lineHeight:"16px",fontWeight:"500"}],"display-kpi":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"table-cell":["13px",{lineHeight:"18px",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-regular text-body-regular text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[240px] bg-primary-container text-on-primary z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md border-b border-primary/20"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded bg-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-headline-section text-headline-section font-bold tracking-tight text-on-primary leading-none">맥(脈)</span><span class="font-caption-regular text-caption-regular text-on-primary-container tracking-normal mt-1">지방소멸 조기감지</span></div></div></div><nav class="flex flex-col gap-1 px-space-sm py-space-md" data-active-classes="bg-primary text-on-primary font-body-semibold font-semibold rounded"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 transition-colors bg-primary text-on-primary font-body-semibold font-semibold rounded" data-path="national-overview" href="#"><span class="material-symbols-outlined text-[18px]">public</span><span class="font-body-medium text-body-medium">전국 현황</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="regional-diagnosis" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span class="font-body-medium text-body-medium">지역 진단</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="alert-center" href="#"><span class="material-symbols-outlined text-[18px]">warning</span><span class="font-body-medium text-body-medium">경보 센터</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="regional-comparison" href="#"><span class="material-symbols-outlined text-[18px]">compare_arrows</span><span class="font-body-medium text-body-medium">지역 비교</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="prescriptions-and-reports" href="#"><span class="material-symbols-outlined text-[18px]">description</span><span class="font-body-medium text-body-medium">처방 및 리포트</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-primary-container hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="entrepreneurship-suitability" href="#"><span class="material-symbols-outlined text-[18px]">storefront</span><span class="font-body-medium text-body-medium">창업 적합도</span></a></nav></div><div class="p-space-md border-t border-primary/20 bg-primary/30 flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-caption-regular text-caption-regular text-on-primary-container">데이터 기준</span><span class="font-caption-medium text-caption-medium text-on-primary font-semibold tabular-nums">2026. 06</span></div><div class="flex items-center gap-space-sm pt-2 border-t border-primary/20"><div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[16px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-caption-medium text-caption-medium text-on-primary truncate font-semibold">김수현</span><span class="font-caption-regular text-caption-regular text-on-primary-container truncate">영암군청 기획실</span></div></div></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md z-40 border-b border-surface-container-highest px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><span class="inline-flex items-center px-2 py-0.5 rounded border border-outline-variant bg-surface-container-low font-caption-medium text-caption-medium text-on-surface-variant font-medium">대외비 아님 / 행정업무용</span><span class="font-caption-regular text-caption-regular text-outline tabular-nums">시스템 최종 동기화: 2026-06-18 10:42 KST</span></div><div class="flex items-center gap-space-md"><button aria-label="시스템 알림" class="relative p-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="h-4 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="font-caption-medium text-caption-medium text-on-surface font-semibold">김수현 주무관</span></div></div></header><main class="w-full pt-14 bg-surface min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Bar: Regional Briefing Header & Filter Action Strip -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-primary-container text-on-primary font-caption-medium text-caption-medium">국가 균형발전 위원회 연계</span>
+<span class="font-caption-regular text-caption-regular text-outline">데이터 차수: 2026-Q2 종합</span>
+</div>
+<h1 class="font-headline-page text-headline-page text-on-surface tracking-tight">전국 인구·상권 맥락 종합 진단</h1>
+<p class="font-body-regular text-body-regular text-on-surface-variant">카드 소비 기반 상권 사다리 모델과 이동통신 인구 이동 데이터를 결합한 255개 시군구 조기 소멸 감지 시스템</p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-1.5 px-3 py-2 bg-surface-container-low hover:bg-surface-container text-on-surface font-body-semibold text-body-semibold rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">tune</span>
+<span>지표 가중치 설정</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary hover:bg-primary-container font-body-semibold text-body-semibold rounded transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>행정보고용 HWP/XLSX 내보내기</span>
+</button>
+</div>
+</div>
+<!-- 1. KPI Cards Grid (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1: 진단 지역 -->
+<div class="bg-surface-container-lowest rounded-lg p-5 flex flex-col justify-between relative shadow-sm">
+<div class="flex items-start justify-between">
+<span class="font-caption-medium text-caption-medium text-on-surface-variant">진단 지역 수</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-caption-medium text-caption-medium text-on-surface-variant">전수 조사</span>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-display-kpi text-display-kpi text-on-surface font-bold tabular-nums">255</span>
+<span class="font-body-medium text-body-medium text-on-surface-variant">개 기초지자체</span>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-caption-regular text-caption-regular text-outline">전국 시·군·구 100% 모니터링 체계</span>
+<span class="font-caption-medium text-caption-medium text-secondary flex items-center">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="ml-0.5">정상 연동</span>
+</span>
+</div>
+</div>
+<!-- Card 2: 활성 경보 -->
+<div class="bg-surface-container-lowest rounded-lg p-5 flex flex-col justify-between relative shadow-sm">
+<div class="flex items-start justify-between">
+<span class="font-caption-medium text-caption-medium text-on-surface-variant">활성 경보</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-error-container text-on-error-container font-caption-medium text-caption-medium font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span>+5건</span>
+</span>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-display-kpi text-display-kpi text-on-surface font-bold tabular-nums">63</span>
+<span class="font-body-medium text-body-medium text-on-surface-variant">건</span>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-caption-regular text-caption-regular text-outline">전월 대비 이상 징후 증가 추이</span>
+<span class="font-caption-medium text-caption-medium text-error font-semibold">주의 단계</span>
+</div>
+</div>
+<!-- Card 3: 이탈 선행형 -->
+<div class="bg-surface-container-lowest rounded-lg p-5 flex flex-col justify-between relative shadow-sm">
+<div class="flex items-start justify-between">
+<span class="font-caption-medium text-caption-medium text-on-surface-variant">이탈 선행형 지역</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-error-container text-on-error-container font-caption-medium text-caption-medium font-bold">
+          집중 관리 대상
+        </span>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-display-kpi text-display-kpi text-error font-bold tabular-nums">21</span>
+<span class="font-body-medium text-body-medium text-error font-semibold">개 지역</span>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-caption-regular text-caption-regular text-outline">상권은 유지되나 청년·가구 급감</span>
+<span class="font-caption-medium text-caption-medium text-error flex items-center">
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+<span class="ml-0.5">골든타임 대응</span>
+</span>
+</div>
+</div>
+<!-- Card 4: 위계 정합도 -->
+<div class="bg-surface-container-lowest rounded-lg p-5 flex flex-col justify-between relative shadow-sm">
+<div class="flex items-start justify-between">
+<span class="font-caption-medium text-caption-medium text-on-surface-variant">위계 정합도</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-caption-medium text-caption-medium font-semibold">신뢰지수 S</span>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-display-kpi text-display-kpi text-secondary font-bold tabular-nums">97.3</span>
+<span class="font-body-medium text-body-medium text-on-surface-variant">%</span>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-caption-regular text-caption-regular text-outline">카드 소비 기반 사다리 모델 적합성</span>
+<span class="font-caption-medium text-caption-medium text-on-surface-variant font-semibold">AIC 0.94</span>
+</div>
+</div>
+</div>
+<!-- 2. Middle Split Section: 2x2 Scatter Plot (2) vs Recent Alerts (1) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Left: 2x2 Scatter Matrix Card (2 cols) -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-lg p-6 flex flex-col justify-between shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-section text-headline-section text-on-surface">2×2 지자체 소멸 리스크 사분면 매트릭스</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-caption-medium text-caption-medium">2026년 6월 현행</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant mt-0.5">상권 사다리(생활필수·외식·의료·문화 기능 유지)와 세대이탈률 교차 군집 분석</p>
+</div>
+<div class="flex items-center gap-1.5 self-start sm:self-auto text-on-surface-variant">
+<span class="font-caption-medium text-caption-medium">N=255 지자체</span>
+</div>
+</div>
+<!-- Scatter Visual Canvas -->
+<div class="relative w-full aspect-[16/10] min-h-[380px] bg-surface-container-low rounded-lg p-6 overflow-hidden select-none">
+<!-- Quadrant Background Tints -->
+<!-- Top Right: 이탈 선행형 (Warning Area) -->
+<div class="absolute right-12 top-6 bottom-[46%] left-[50%] bg-error-container/40 rounded flex flex-col justify-start items-end p-3 pointer-events-none">
+<span class="font-caption-medium text-caption-medium text-error font-bold px-2 py-0.5 rounded bg-surface-container-lowest shadow-sm">이탈 선행형 (핵심 집중관리 구역)</span>
+<span class="font-caption-regular text-caption-regular text-error text-right mt-1">상권 유지 중 세대 급감 발생</span>
+</div>
+<!-- Bottom Right: 유지형 (Stable Area) -->
+<div class="absolute right-12 bottom-12 top-[54%] left-[50%] bg-surface-container-high/40 rounded flex flex-col justify-end items-end p-3 pointer-events-none">
+<span class="font-caption-medium text-caption-medium text-on-surface-variant font-semibold">안정 유지형 (양호)</span>
+</div>
+<!-- Top Left: 복합 소멸형 (Critical Deficit) -->
+<div class="absolute left-14 top-6 bottom-[46%] right-[50%] bg-surface-container-highest/60 rounded flex flex-col justify-start items-start p-3 pointer-events-none">
+<span class="font-caption-medium text-caption-medium text-primary font-bold px-2 py-0.5 rounded bg-surface-container-lowest shadow-sm">복합 소멸형 (구조적 붕괴)</span>
+</div>
+<!-- Bottom Left: 기능 결손형 (Functional Deficit) -->
+<div class="absolute left-14 bottom-12 top-[54%] right-[50%] bg-tertiary-fixed/30 rounded flex flex-col justify-end items-start p-3 pointer-events-none">
+<span class="font-caption-medium text-caption-medium text-on-tertiary-container font-semibold">기능 결손형 (인프라 취약)</span>
+</div>
+<!-- Y-Axis Grid Lines & Tick Labels (Y: 세대이탈지수 %p) -->
+<div class="absolute left-14 right-12 top-6 bottom-12 pointer-events-none">
+<!-- +40%p -->
+<div class="absolute top-[0%] w-full flex items-center justify-between text-caption-regular font-caption-regular text-outline opacity-60">
+<span class="-ml-12 w-10 text-right">+40</span>
+<div class="w-full h-px bg-surface-container-highest ml-2"></div>
+</div>
+<!-- +30%p -->
+<div class="absolute top-[14.28%] w-full flex items-center justify-between text-caption-regular font-caption-regular text-outline opacity-60">
+<span class="-ml-12 w-10 text-right">+30</span>
+<div class="w-full h-px bg-surface-container-highest ml-2"></div>
+</div>
+<!-- +20%p -->
+<div class="absolute top-[28.57%] w-full flex items-center justify-between text-caption-regular font-caption-regular text-outline opacity-60">
+<span class="-ml-12 w-10 text-right">+20</span>
+<div class="w-full h-px bg-surface-container-highest ml-2"></div>
+</div>
+<!-- +10%p -->
+<div class="absolute top-[42.85%] w-full flex items-center justify-between text-caption-regular font-caption-regular text-outline opacity-60">
+<span class="-ml-12 w-10 text-right">+10</span>
+<div class="w-full h-px bg-surface-container-highest ml-2"></div>
+</div>
+<!-- Horizontal Threshold: Y = +8.0%p 경보선 -->
+<div class="absolute top-[45.71%] w-full flex items-center justify-between z-10">
+<span class="-ml-14 w-12 text-right text-caption-medium font-caption-medium text-error font-bold">+8.0</span>
+<div class="w-full h-[2px] bg-error border-dashed border-t border-error ml-2 relative">
+<span class="absolute right-2 -top-5 text-caption-medium font-caption-medium text-error bg-surface-container-lowest px-1.5 py-0.2 rounded shadow-xs font-semibold">경보 임계선 (세대이탈 8.0%p)</span>
+</div>
+</div>
+<!-- 0%p Baseline -->
+<div class="absolute top-[57.14%] w-full flex items-center justify-between text-caption-regular font-caption-regular text-outline">
+<span class="-ml-12 w-10 text-right font-semibold">0</span>
+<div class="w-full h-px bg-outline-variant ml-2"></div>
+</div>
+<!-- -10%p -->
+<div class="absolute top-[71.42%] w-full flex items-center justify-between text-caption-regular font-caption-regular text-outline opacity-60">
+<span class="-ml-12 w-10 text-right">-10</span>
+<div class="w-full h-px bg-surface-container-highest ml-2"></div>
+</div>
+<!-- -20%p -->
+<div class="absolute top-[85.71%] w-full flex items-center justify-between text-caption-regular font-caption-regular text-outline opacity-60">
+<span class="-ml-12 w-10 text-right">-20</span>
+<div class="w-full h-px bg-surface-container-highest ml-2"></div>
+</div>
+<!-- -30%p -->
+<div class="absolute top-[100%] w-full flex items-center justify-between text-caption-regular font-caption-regular text-outline opacity-60">
+<span class="-ml-12 w-10 text-right">-30</span>
+<div class="w-full h-px bg-surface-container-highest ml-2"></div>
+</div>
+<!-- Vertical Threshold: X = 1.5점 기능 임계선 -->
+<div class="absolute top-0 bottom-0 left-[50%] flex flex-col items-center z-10">
+<div class="h-full w-[2px] bg-primary border-dashed border-l border-primary relative">
+<span class="absolute -top-5 -left-12 text-caption-medium font-caption-medium text-primary bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-xs font-semibold whitespace-nowrap">기능 임계선 (1.5점)</span>
+</div>
+</div>
+</div>
+<!-- X-Axis Labels (X: 상권기능 사다리 점수 0, 1, 2, 3) -->
+<div class="absolute left-14 right-12 bottom-4 flex justify-between text-caption-regular font-caption-regular text-on-surface-variant pointer-events-none">
+<span class="text-left font-semibold">0.0 (최하위)</span>
+<span class="text-center">1.0</span>
+<span class="text-center font-bold text-primary">1.5 (기준점)</span>
+<span class="text-center">2.0</span>
+<span class="text-right font-semibold">3.0 (최상위 사다리)</span>
+</div>
+<!-- Axis Titles -->
+<div class="absolute left-2 top-1/2 -translate-y-1/2 -rotate-90 origin-center text-caption-medium font-caption-medium text-on-surface tracking-wider font-semibold pointer-events-none">
+          세대이탈지수 (%p)
+        </div>
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 text-caption-medium font-caption-medium text-on-surface tracking-wider font-semibold pointer-events-none">
+          상권기능 사다리 점수 (0 ~ 3.0점)
+        </div>
+<!-- Scatter Points SVG (Precise Multi-Dot Distribution) -->
+<svg class="absolute left-14 right-12 top-6 bottom-12 w-[calc(100%-6.5rem)] h-[calc(100%-4.5rem)] overflow-visible z-20" preserveaspectratio="none" viewbox="0 0 700 350">
+<!-- 유형 1: 유지형 (#9AA5B1) ~ 184개 점 (아래쪽 중심 및 우하단 밀집) -->
+<g fill="#74777f" opacity="0.65">
+<!-- 수도권 및 광역시 우하단 안정 지점들 -->
+<circle cx="580" cy="280" r="4.5"></circle>
+<circle cx="620" cy="270" r="5"></circle>
+<circle cx="540" cy="260" r="4"></circle>
+<circle cx="480" cy="240" r="4"></circle>
+<circle cx="510" cy="225" r="4.5"></circle>
+<circle cx="450" cy="250" r="4"></circle>
+<circle cx="420" cy="270" r="3.5"></circle>
+<circle cx="600" cy="230" r="5"></circle>
+<circle cx="560" cy="210" r="4"></circle>
+<circle cx="530" cy="240" r="4"></circle>
+<circle cx="490" cy="290" r="4.5"></circle>
+<circle cx="650" cy="250" r="5"></circle>
+<circle cx="630" cy="290" r="4"></circle>
+<circle cx="460" cy="220" r="3.5"></circle>
+<circle cx="390" cy="230" r="4"></circle>
+<circle cx="520" cy="205" r="4"></circle>
+<circle cx="570" cy="245" r="4"></circle>
+<circle cx="440" cy="280" r="3.5"></circle>
+<circle cx="475" cy="265" r="4"></circle>
+<circle cx="505" cy="250" r="4.5"></circle>
+<circle cx="590" cy="215" r="4"></circle>
+<circle cx="615" cy="265" r="4.5"></circle>
+<!-- 추가 유지형 다수 점들 산개 -->
+<circle cx="380" cy="215" r="3.5"></circle><circle cx="410" cy="245" r="4"></circle><circle cx="430" cy="210" r="3.5"></circle>
+<circle cx="515" cy="280" r="4"></circle><circle cx="545" cy="235" r="4"></circle><circle cx="575" cy="275" r="4"></circle>
+<circle cx="605" cy="255" r="4.5"></circle><circle cx="640" cy="220" r="4"></circle><circle cx="495" cy="215" r="3.5"></circle>
+<circle cx="365" cy="225" r="3.5"></circle><circle cx="425" cy="235" r="4"></circle><circle cx="465" cy="245" r="3.5"></circle>
+<circle cx="535" cy="265" r="4"></circle><circle cx="585" cy="295" r="4"></circle><circle cx="625" cy="240" r="4.5"></circle>
+<!-- 중심 클러스터 -->
+<circle cx="415" cy="260" r="4"></circle><circle cx="445" cy="295" r="3.5"></circle><circle cx="485" cy="275" r="4"></circle>
+<circle cx="525" cy="220" r="4"></circle><circle cx="555" cy="250" r="4"></circle><circle cx="660" cy="270" r="4"></circle>
+</g>
+<!-- 유형 3: 기능 결손형 (#D68910) ~ 30개 점 (좌하단: 사다리는 낮으나 이탈도 아직 낮음) -->
+<g fill="#e1921d" opacity="0.85">
+<circle cx="180" cy="230" r="4.5"></circle>
+<circle cx="210" cy="250" r="5"></circle>
+<circle cx="260" cy="220" r="4.5"></circle>
+<circle cx="140" cy="245" r="4"></circle>
+<circle cx="290" cy="260" r="5"></circle>
+<circle cx="230" cy="280" r="4"></circle>
+<circle cx="310" cy="240" r="4.5"></circle>
+<circle cx="170" cy="270" r="4"></circle>
+<circle cx="240" cy="235" r="4"></circle>
+<circle cx="280" cy="275" r="4.5"></circle>
+<circle cx="195" cy="260" r="4"></circle>
+<circle cx="325" cy="225" r="4.5"></circle>
+<circle cx="160" cy="290" r="4"></circle>
+<circle cx="225" cy="215" r="4"></circle>
+</g>
+<!-- 유형 4: 복합 소멸형 (#1F3A5F) ~ 20개 점 (좌상단: 사다리 붕괴 & 이탈 심각) -->
+<g fill="#032448" opacity="0.9">
+<circle cx="110" cy="65" r="5.5"></circle>
+<circle cx="160" cy="90" r="5"></circle>
+<circle cx="210" cy="115" r="5"></circle>
+<circle cx="85" cy="130" r="5.5"></circle>
+<circle cx="240" cy="80" r="5"></circle>
+<circle cx="190" cy="140" r="5"></circle>
+<circle cx="270" cy="120" r="5"></circle>
+<circle cx="130" cy="110" r="5"></circle>
+<circle cx="300" cy="100" r="4.5"></circle>
+<circle cx="175" cy="70" r="5"></circle>
+</g>
+<!-- 유형 2: 이탈 선행형 (#ba1a1a) ~ 21개 점 (우상단: 사다리 2~3점 유지되나 세대이탈 > 8.0) -->
+<g fill="#ba1a1a">
+<circle class="cursor-pointer hover:scale-125 transition-transform" cx="460" cy="75" r="6"></circle>
+<circle class="cursor-pointer hover:scale-125 transition-transform" cx="510" cy="95" r="6.5"></circle>
+<circle class="cursor-pointer hover:scale-125 transition-transform" cx="570" cy="120" r="6"></circle>
+<circle class="cursor-pointer hover:scale-125 transition-transform" cx="430" cy="110" r="5.5"></circle>
+<circle class="cursor-pointer hover:scale-125 transition-transform" cx="490" cy="60" r="6"></circle>
+<circle class="cursor-pointer hover:scale-125 transition-transform" cx="610" cy="135" r="6"></circle>
+<circle class="cursor-pointer hover:scale-125 transition-transform" cx="540" cy="85" r="6.5"></circle>
+<circle class="cursor-pointer hover:scale-125 transition-transform" cx="475" cy="130" r="5.5"></circle>
+<circle class="cursor-pointer hover:scale-125 transition-transform" cx="590" cy="90" r="6"></circle>
+<circle class="cursor-pointer hover:scale-125 transition-transform" cx="445" cy="90" r="5.5"></circle>
+<circle class="cursor-pointer hover:scale-125 transition-transform" cx="525" cy="140" r="5"></circle>
+<circle class="cursor-pointer hover:scale-125 transition-transform" cx="560" cy="65" r="6.5"></circle>
+<circle class="cursor-pointer hover:scale-125 transition-transform" cx="630" cy="115" r="5.5"></circle>
+</g>
+<!-- Representative Labeled Points with Government Administrative Tags -->
+<!-- 서울 중구 (유지형 최우하단) -->
+<g transform="translate(620, 270)">
+<circle cx="0" cy="0" fill="#121d26" r="6" stroke="#ffffff" stroke-width="1.5"></circle>
+<rect fill="#121d26" height="18" rx="2" width="62" x="8" y="-18"></rect>
+<text fill="#ffffff" font-family="Public Sans" font-size="10" font-weight="600" text-anchor="middle" x="39" y="-6">서울 중구</text>
+</g>
+<!-- 영암군 (이탈 선행형 핵심) -->
+<g transform="translate(510, 95)">
+<circle class="animate-pulse" cx="0" cy="0" fill="#ba1a1a" r="7.5" stroke="#ffffff" stroke-width="2"></circle>
+<rect fill="#ba1a1a" height="20" rx="3" width="70" x="10" y="-22"></rect>
+<text fill="#ffffff" font-family="Public Sans" font-size="11" font-weight="700" text-anchor="middle" x="45" y="-8">전남 영암군</text>
+<path d="M 0 0 L 10 -12" stroke="#ba1a1a" stroke-width="1.5"></path>
+</g>
+<!-- 곡성군 (이탈 선행형) -->
+<g transform="translate(460, 75)">
+<circle cx="0" cy="0" fill="#ba1a1a" r="6.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<rect fill="#ba1a1a" height="18" rx="2" width="58" x="-66" y="-20"></rect>
+<text fill="#ffffff" font-family="Public Sans" font-size="10" font-weight="700" text-anchor="middle" x="-37" y="-7">전남 곡성군</text>
+</g>
+<!-- 신안군 (복합 소멸형 대표) -->
+<g transform="translate(110, 65)">
+<circle cx="0" cy="0" fill="#032448" r="6.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<rect fill="#032448" height="18" rx="2" width="58" x="8" y="-18"></rect>
+<text fill="#ffffff" font-family="Public Sans" font-size="10" font-weight="700" text-anchor="middle" x="37" y="-6">전남 신안군</text>
+</g>
+<!-- 옹진군 (기능 결손형 대표) -->
+<g transform="translate(180, 230)">
+<circle cx="0" cy="0" fill="#e1921d" r="6.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<rect fill="#543200" height="18" rx="2" width="58" x="8" y="-18"></rect>
+<text fill="#ffddb9" font-family="Public Sans" font-size="10" font-weight="700" text-anchor="middle" x="37" y="-6">인천 옹진군</text>
+</g>
+</svg>
+</div>
+<!-- Chart Footer Legend & Counts -->
+<div class="mt-4 pt-4 flex flex-wrap items-center justify-between gap-3 bg-surface-container-low/50 p-3 rounded">
+<div class="flex flex-wrap items-center gap-4">
+<!-- 유지형 -->
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-outline"></span>
+<span class="font-body-medium text-body-medium text-on-surface">유지형</span>
+<span class="font-caption-medium text-caption-medium px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-bold tabular-nums">184곳 (72.2%)</span>
+</div>
+<!-- 이탈 선행형 -->
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="font-body-medium text-body-medium text-error font-bold">이탈 선행형</span>
+<span class="font-caption-medium text-caption-medium px-2 py-0.5 rounded bg-error-container text-on-error-container font-bold tabular-nums">21곳 (8.2%)</span>
+</div>
+<!-- 기능 결손형 -->
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-on-tertiary-container"></span>
+<span class="font-body-medium text-body-medium text-on-surface">기능 결손형</span>
+<span class="font-caption-medium text-caption-medium px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold tabular-nums">30곳 (11.8%)</span>
+</div>
+<!-- 복합 소멸형 -->
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-body-medium text-body-medium text-on-surface">복합 소멸형</span>
+<span class="font-caption-medium text-caption-medium px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-bold tabular-nums">20곳 (7.8%)</span>
+</div>
+</div>
+<span class="font-caption-regular text-caption-regular text-outline">※ 세대이탈 임계치 8.0%p 초과 지자체 자동 적색 마킹</span>
+</div>
+</div>
+<!-- Right: Recent Alerts Scrollable Panel (1 col) -->
+<div class="bg-surface-container-lowest rounded-lg p-5 flex flex-col justify-between shadow-sm h-full">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<h2 class="font-headline-section text-headline-section text-on-surface">최근 감지 경보</h2>
+</div>
+<span class="font-caption-medium text-caption-medium text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">실시간 8건</span>
+</div>
+<!-- Alert Rows Container -->
+<div class="flex flex-col gap-2 overflow-y-auto max-h-[460px] pr-1" id="alert-feed-container">
+<!-- Alert 1 -->
+<div class="flex items-stretch bg-surface-container-low hover:bg-surface-container rounded transition-colors overflow-hidden p-2.5">
+<div class="w-1.5 bg-error rounded-full shrink-0 mr-3"></div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate">전남 영암군</span>
+<span class="font-caption-medium text-caption-medium px-1.5 py-0.2 rounded bg-error-container text-on-error-container shrink-0">선행 경보</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant line-clamp-2">
+              세대이탈지수 +19.4%p로 상위 구간 진입 (사다리 2.1점 대비 급격한 청년 전출)
+            </p>
+<span class="font-caption-regular text-caption-regular text-outline mt-1.5 tabular-nums">3시간 전 · 시스템 감지</span>
+</div>
+</div>
+<!-- Alert 2 -->
+<div class="flex items-stretch bg-surface-container-low hover:bg-surface-container rounded transition-colors overflow-hidden p-2.5">
+<div class="w-1.5 bg-error rounded-full shrink-0 mr-3"></div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate">전남 곡성군</span>
+<span class="font-caption-medium text-caption-medium px-1.5 py-0.2 rounded bg-error-container text-on-error-container shrink-0">선행 경보</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant line-clamp-2">
+              필수식품 소매 매출 유지 중 30대 이하 세대 전출률 3개 분기 연속 상승
+            </p>
+<span class="font-caption-regular text-caption-regular text-outline mt-1.5 tabular-nums">5시간 전 · 분기 평가</span>
+</div>
+</div>
+<!-- Alert 3 -->
+<div class="flex items-stretch bg-surface-container-low hover:bg-surface-container rounded transition-colors overflow-hidden p-2.5">
+<div class="w-1.5 bg-on-tertiary-container rounded-full shrink-0 mr-3"></div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate">경남 고성군</span>
+<span class="font-caption-medium text-caption-medium px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed shrink-0">외국인 의존</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant line-clamp-2">
+              제조단지 배후 소비 중 외국인 전용 결제 비중 38.2% 초과
+            </p>
+<span class="font-caption-regular text-caption-regular text-outline mt-1.5 tabular-nums">7시간 전 · 외환/카드사 연계</span>
+</div>
+</div>
+<!-- Alert 4 -->
+<div class="flex items-stretch bg-surface-container-low hover:bg-surface-container rounded transition-colors overflow-hidden p-2.5">
+<div class="w-1.5 bg-on-tertiary-container rounded-full shrink-0 mr-3"></div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate">강원 양양군</span>
+<span class="font-caption-medium text-caption-medium px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant shrink-0">과소평가</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant line-clamp-2">
+              관광 성수기 외식 소비 과대계상으로 인한 일반 주거 정주기능 착시
+            </p>
+<span class="font-caption-regular text-caption-regular text-outline mt-1.5 tabular-nums">9시간 전 · 생활인구 보정</span>
+</div>
+</div>
+<!-- Alert 5 -->
+<div class="flex items-stretch bg-surface-container-low hover:bg-surface-container rounded transition-colors overflow-hidden p-2.5">
+<div class="w-1.5 bg-error rounded-full shrink-0 mr-3"></div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate">충남 보령시</span>
+<span class="font-caption-medium text-caption-medium px-1.5 py-0.2 rounded bg-error-container text-on-error-container shrink-0">선행 경보</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant line-clamp-2">
+              원도심 1차 의료기관 휴폐업 증가로 상권 사다리 1단계 이탈 위험도 가중
+            </p>
+<span class="font-caption-regular text-caption-regular text-outline mt-1.5 tabular-nums">어제 · 복지부 데이터</span>
+</div>
+</div>
+<!-- Alert 6 -->
+<div class="flex items-stretch bg-surface-container-low hover:bg-surface-container rounded transition-colors overflow-hidden p-2.5">
+<div class="w-1.5 bg-primary rounded-full shrink-0 mr-3"></div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate">경북 봉화군</span>
+<span class="font-caption-medium text-caption-medium px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface shrink-0">복합 소멸</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant line-clamp-2">
+              상권 사다리 0.8점 하회 및 고령화율 42% 돌파로 한계지역 재분류
+            </p>
+<span class="font-caption-regular text-caption-regular text-outline mt-1.5 tabular-nums">어제 · 통계청 동기화</span>
+</div>
+</div>
+<!-- Alert 7 -->
+<div class="flex items-stretch bg-surface-container-low hover:bg-surface-container rounded transition-colors overflow-hidden p-2.5">
+<div class="w-1.5 bg-on-tertiary-container rounded-full shrink-0 mr-3"></div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate">전북 김제시</span>
+<span class="font-caption-medium text-caption-medium px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed shrink-0">외국인 의존</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant line-clamp-2">
+              농축산 가공공장 인근 유통 결제 외국인 카드 비중 전년비 14.3% 증가
+            </p>
+<span class="font-caption-regular text-caption-regular text-outline mt-1.5 tabular-nums">2일 전 · 정기 점검</span>
+</div>
+</div>
+<!-- Alert 8 -->
+<div class="flex items-stretch bg-surface-container-low hover:bg-surface-container rounded transition-colors overflow-hidden p-2.5">
+<div class="w-1.5 bg-error rounded-full shrink-0 mr-3"></div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate">전남 담양군</span>
+<span class="font-caption-medium text-caption-medium px-1.5 py-0.2 rounded bg-error-container text-on-error-container shrink-0">선행 경보</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant line-clamp-2">
+              광주 배후 통근 유입에도 불구 실거주 2030 가구수 연쇄 감소
+            </p>
+<span class="font-caption-regular text-caption-regular text-outline mt-1.5 tabular-nums">2일 전 · 생활권 검증</span>
+</div>
+</div>
+</div>
+<div class="pt-3 mt-2 flex items-center justify-between text-caption-regular text-caption-regular text-outline">
+<span>경보 기준치: 국토부 가이드라인 v2.4</span>
+<button class="text-secondary font-body-semibold text-body-semibold hover:underline inline-flex items-center gap-0.5" type="button">
+<span>전체 경보 관리소</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 3. Bottom Full Width Card: National Choropleth Map View -->
+<div class="bg-surface-container-lowest rounded-lg p-6 flex flex-col shadow-sm relative">
+<!-- Map Header Strip -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-section text-headline-section text-on-surface">전국 255개 시·군·구 유형 분류 지도</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-caption-medium text-caption-medium">대화형 시각화</span>
+</div>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant mt-0.5">지자체 구역을 선택하면 정밀 진단 스코어와 사다리 지표가 표출됩니다.</p>
+</div>
+<!-- Filter Toggle Chips -->
+<div class="flex flex-wrap items-center gap-1.5 bg-surface-container-low p-1.5 rounded-lg" id="map-filter-group">
+<button class="filter-btn active px-3 py-1 rounded text-caption-medium font-caption-medium bg-primary text-on-primary font-semibold transition-all" data-filter="all" type="button">전체 (255)</button>
+<button class="filter-btn px-3 py-1 rounded text-caption-medium font-caption-medium text-on-surface hover:bg-surface-container-high transition-all flex items-center gap-1" data-filter="leading" type="button">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>이탈 선행형 (21)</span>
+</button>
+<button class="filter-btn px-3 py-1 rounded text-caption-medium font-caption-medium text-on-surface hover:bg-surface-container-high transition-all flex items-center gap-1" data-filter="functional" type="button">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span>기능 결손형 (30)</span>
+</button>
+<button class="filter-btn px-3 py-1 rounded text-caption-medium font-caption-medium text-on-surface hover:bg-surface-container-high transition-all flex items-center gap-1" data-filter="compound" type="button">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>복합 소멸형 (20)</span>
+</button>
+<button class="filter-btn px-3 py-1 rounded text-caption-medium font-caption-medium text-on-surface hover:bg-surface-container-high transition-all flex items-center gap-1" data-filter="stable" type="button">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>유지형 (184)</span>
+</button>
+</div>
+</div>
+<!-- Map Canvas & Regional Inspector Container -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter relative mt-2">
+<!-- Korea Choropleth Map Visual (SVG Based Bespoke Administrative Graphic) -->
+<div class="lg:col-span-8 bg-surface-container-low rounded-lg p-4 relative min-h-[460px] flex items-center justify-center overflow-hidden">
+<!-- Live Floating Tooltip -->
+<div class="absolute pointer-events-none z-30 transition-all duration-150 ease-out hidden bg-inverse-surface text-inverse-on-surface p-3 rounded-lg shadow-xl max-w-xs" id="map-tooltip">
+<div class="flex items-center justify-between gap-3 mb-1">
+<span class="font-body-semibold text-body-semibold font-bold" id="tooltip-title">전라남도 영암군</span>
+<span class="px-1.5 py-0.5 rounded text-[11px] font-bold bg-error text-on-error" id="tooltip-badge">이탈 선행형</span>
+</div>
+<div class="space-y-0.5 font-caption-regular text-caption-regular text-surface-variant">
+<div>상권 사다리: <span class="font-semibold text-inverse-on-surface" id="tooltip-ladder">2.1 / 3.0점</span></div>
+<div>세대이탈지수: <span class="font-semibold text-error" id="tooltip-outflow">+19.4%p (위험)</span></div>
+<div>선행 경보: <span class="text-inverse-on-surface" id="tooltip-status">30대 유출 심화 단계</span></div>
+</div>
+</div>
+<!-- Korea Administrative Choropleth Shape SVG -->
+<svg class="w-full max-w-[620px] h-[480px] drop-shadow-sm select-none" fill="none" viewbox="0 0 650 600" xmlns="http://www.w3.org/2000/svg">
+<!-- Background Grid Coordinate Hints -->
+<line stroke="#d0dbe8" stroke-dasharray="3 3" x1="100" x2="100" y1="50" y2="550"></line>
+<line stroke="#d0dbe8" stroke-dasharray="3 3" x1="250" x2="250" y1="50" y2="550"></line>
+<line stroke="#d0dbe8" stroke-dasharray="3 3" x1="400" x2="400" y1="50" y2="550"></line>
+<line stroke="#d0dbe8" stroke-dasharray="3 3" x1="550" x2="550" y1="50" y2="550"></line>
+<line stroke="#d0dbe8" stroke-dasharray="3 3" x1="50" x2="600" y1="120" y2="120"></line>
+<line stroke="#d0dbe8" stroke-dasharray="3 3" x1="50" x2="600" y1="260" y2="260"></line>
+<line stroke="#d0dbe8" stroke-dasharray="3 3" x1="50" x2="600" y1="400" y2="400"></line>
+<!-- Regional Polygon Clusters (Categorized via data-type) -->
+<!-- 1. 수도권 (Seoul / Gyeonggi / Incheon) - 유지형 주조 -->
+<g class="region-poly group" data-ladder="2.9 / 3.0점" data-name="서울특별시" data-outflow="-12.1%p" data-status="고도 집적 중심지" data-type="stable" tabindex="0">
+<path class="fill-surface-variant hover:fill-secondary-container transition-colors cursor-pointer" d="M210,120 L240,115 L260,135 L245,155 L215,150 Z"></path>
+<text fill="#121d26" font-family="Public Sans" font-size="11" font-weight="700" text-anchor="middle" x="235" y="138">서울</text>
+</g>
+<g class="region-poly group" data-ladder="2.4 / 3.0점" data-name="경기도 북부" data-outflow="-2.4%p" data-status="배후 정주 양호" data-type="stable" tabindex="0">
+<path class="fill-surface-variant hover:fill-secondary-container transition-colors cursor-pointer" d="M190,80 L250,70 L280,105 L260,135 L210,120 L190,100 Z"></path>
+<text fill="#43474e" font-family="Public Sans" font-size="10" font-weight="600" text-anchor="middle" x="230" y="98">경기북부</text>
+</g>
+<g class="region-poly group" data-ladder="1.2 / 3.0점" data-name="인천 강화·옹진" data-outflow="+4.1%p" data-status="도서 인프라 취약" data-type="functional" tabindex="0">
+<path class="fill-on-tertiary-container hover:opacity-80 transition-colors cursor-pointer" d="M165,110 L195,105 L190,135 L160,145 Z"></path>
+<text fill="#ffffff" font-family="Public Sans" font-size="9" font-weight="700" text-anchor="middle" x="175" y="130">옹진</text>
+</g>
+<g class="region-poly group" data-ladder="2.7 / 3.0점" data-name="경기도 남부" data-outflow="-5.8%p" data-status="산업단지 집중" data-type="stable" tabindex="0">
+<path class="fill-surface-variant hover:fill-secondary-container transition-colors cursor-pointer" d="M215,150 L260,135 L275,185 L225,195 L200,165 Z"></path>
+<text fill="#43474e" font-family="Public Sans" font-size="10" font-weight="600" text-anchor="middle" x="240" y="168">경기남부</text>
+</g>
+<!-- 2. 강원권 (Gangwon) -->
+<g class="region-poly group" data-ladder="2.1 / 3.0점" data-name="강원도 춘천·원주" data-outflow="+1.2%p" data-status="영서 거점 도시" data-type="stable" tabindex="0">
+<path class="fill-surface-variant hover:fill-secondary-container transition-colors cursor-pointer" d="M280,105 L360,95 L375,150 L310,170 L275,150 Z"></path>
+<text fill="#43474e" font-family="Public Sans" font-size="10" font-weight="600" text-anchor="middle" x="320" y="135">강원 영서</text>
+</g>
+<g class="region-poly group" data-ladder="1.4 / 3.0점" data-name="강원도 영동(양양·강릉)" data-outflow="+6.5%p" data-status="관광소비 편중 및 정주 결손" data-type="functional" tabindex="0">
+<path class="fill-on-tertiary-container hover:opacity-80 transition-colors cursor-pointer" d="M360,95 L440,110 L425,180 L375,150 Z"></path>
+<text fill="#ffffff" font-family="Public Sans" font-size="10" font-weight="700" text-anchor="middle" x="398" y="145">강원 영동</text>
+</g>
+<g class="region-poly group" data-ladder="0.9 / 3.0점" data-name="강원 남부(태백·정선)" data-outflow="+15.3%p" data-status="폐광지역 복합 소멸 경보" data-type="compound" tabindex="0">
+<path class="fill-primary hover:opacity-90 transition-colors cursor-pointer" d="M375,150 L425,180 L400,225 L335,210 L310,170 Z"></path>
+<text fill="#ffffff" font-family="Public Sans" font-size="10" font-weight="700" text-anchor="middle" x="365" y="190">태백·정선</text>
+</g>
+<!-- 3. 충청권 (Chungcheong) -->
+<g class="region-poly group" data-ladder="2.5 / 3.0점" data-name="충청남도 천안·아산" data-outflow="-3.2%p" data-status="제조업 성장 지속" data-type="stable" tabindex="0">
+<path class="fill-surface-variant hover:fill-secondary-container transition-colors cursor-pointer" d="M185,185 L235,175 L250,225 L200,235 Z"></path>
+<text fill="#43474e" font-family="Public Sans" font-size="10" font-weight="600" text-anchor="middle" x="215" y="208">천안·아산</text>
+</g>
+<g class="region-poly group" data-ladder="2.8 / 3.0점" data-name="대전·세종·청주" data-outflow="-7.4%p" data-status="행정·연구 중심지" data-type="stable" tabindex="0">
+<path class="fill-surface-variant hover:fill-secondary-container transition-colors cursor-pointer" d="M235,175 L295,165 L310,220 L250,225 Z"></path>
+<text fill="#43474e" font-family="Public Sans" font-size="10" font-weight="600" text-anchor="middle" x="270" y="200">대전·세종</text>
+</g>
+<g class="region-poly group" data-ladder="1.9 / 3.0점" data-name="충남 서해안(보령·서천)" data-outflow="+13.8%p" data-status="의료 기능 결손 속 세대 전출" data-type="leading" tabindex="0">
+<path class="fill-error hover:opacity-80 transition-colors cursor-pointer" d="M150,210 L200,205 L190,265 L140,255 Z"></path>
+<text fill="#ffffff" font-family="Public Sans" font-size="10" font-weight="700" text-anchor="middle" x="170" y="240">보령·서천</text>
+</g>
+<g class="region-poly group" data-ladder="1.1 / 3.0점" data-name="충북 영동·옥천" data-outflow="+16.1%p" data-status="상권 1차 사다리 붕괴" data-type="compound" tabindex="0">
+<path class="fill-primary hover:opacity-90 transition-colors cursor-pointer" d="M250,225 L310,220 L320,270 L260,280 Z"></path>
+<text fill="#ffffff" font-family="Public Sans" font-size="10" font-weight="700" text-anchor="middle" x="285" y="255">옥천·영동</text>
+</g>
+<!-- 4. 경북 / 대구권 (Gyeongbuk & Daegu) -->
+<g class="region-poly group" data-ladder="0.8 / 3.0점" data-name="경북 북부(봉화·영양·청송)" data-outflow="+22.4%p" data-status="초고령 심화 복합 소멸" data-type="compound" tabindex="0">
+<path class="fill-primary hover:opacity-90 transition-colors cursor-pointer" d="M335,210 L410,215 L430,280 L350,280 Z"></path>
+<text fill="#ffffff" font-family="Public Sans" font-size="10" font-weight="700" text-anchor="middle" x="380" y="245">봉화·청송</text>
+</g>
+<g class="region-poly group" data-ladder="2.6 / 3.0점" data-name="대구광역시" data-outflow="+2.1%p" data-status="광역 거점" data-type="stable" tabindex="0">
+<path class="fill-surface-variant hover:fill-secondary-container transition-colors cursor-pointer" d="M350,280 L400,275 L415,325 L365,335 Z"></path>
+<text fill="#121d26" font-family="Public Sans" font-size="11" font-weight="700" text-anchor="middle" x="380" y="308">대구</text>
+</g>
+<g class="region-poly group" data-ladder="2.3 / 3.0점" data-name="경북 포항·경주" data-outflow="+0.8%p" data-status="산업 기반 거점" data-type="stable" tabindex="0">
+<path class="fill-surface-variant hover:fill-secondary-container transition-colors cursor-pointer" d="M410,275 L475,270 L480,340 L415,325 Z"></path>
+<text fill="#43474e" font-family="Public Sans" font-size="10" font-weight="600" text-anchor="middle" x="445" y="305">포항·경주</text>
+</g>
+<!-- 5. 전라권 (Jeolla & Gwangju) - 이탈 선행형 핵심 클러스터 -->
+<g class="region-poly group" data-ladder="2.2 / 3.0점" data-name="전라북도 전주·익산" data-outflow="+3.5%p" data-status="도청 소재지 중심" data-type="stable" tabindex="0">
+<path class="fill-surface-variant hover:fill-secondary-container transition-colors cursor-pointer" d="M180,265 L240,260 L245,310 L185,320 Z"></path>
+<text fill="#43474e" font-family="Public Sans" font-size="10" font-weight="600" text-anchor="middle" x="210" y="292">전주·익산</text>
+</g>
+<g class="region-poly group" data-ladder="1.3 / 3.0점" data-name="전북 김제·부안" data-outflow="+7.8%p" data-status="외국인 농업 노동 의존형" data-type="functional" tabindex="0">
+<path class="fill-on-tertiary-container hover:opacity-80 transition-colors cursor-pointer" d="M140,255 L180,265 L185,320 L135,310 Z"></path>
+<text fill="#ffffff" font-family="Public Sans" font-size="9" font-weight="700" text-anchor="middle" x="160" y="290">김제</text>
+</g>
+<g class="region-poly group" data-ladder="2.7 / 3.0점" data-name="광주광역시" data-outflow="-1.2%p" data-status="호남권 중추" data-type="stable" tabindex="0">
+<path class="fill-surface-variant hover:fill-secondary-container transition-colors cursor-pointer" d="M185,335 L230,330 L235,375 L190,380 Z"></path>
+<text fill="#121d26" font-family="Public Sans" font-size="11" font-weight="700" text-anchor="middle" x="208" y="360">광주</text>
+</g>
+<g class="region-poly group" data-ladder="2.0 / 3.0점" data-name="전남 곡성·구례" data-outflow="+14.5%p" data-status="상권 유지 중 세대 이탈" data-type="leading" tabindex="0">
+<path class="fill-error hover:opacity-80 transition-colors cursor-pointer" d="M230,330 L285,325 L290,375 L235,375 Z"></path>
+<text fill="#ffffff" font-family="Public Sans" font-size="10" font-weight="700" text-anchor="middle" x="260" y="355">곡성·구례</text>
+</g>
+<!-- SPOTLIGHT: 영암군 (이탈 선행형 심층 표시) -->
+<g class="region-poly group" data-ladder="2.1 / 3.0점" data-name="전라남도 영암군" data-outflow="+19.4%p" data-status="집중 관리 1호 지자체" data-type="leading" tabindex="0">
+<path class="fill-error hover:opacity-80 transition-all cursor-pointer stroke-surface stroke-2 filter drop-shadow-md" d="M145,375 L195,375 L200,435 L145,430 Z"></path>
+<circle class="animate-ping" cx="172" cy="405" fill="#ffffff" r="4"></circle>
+<text fill="#ffffff" font-family="Public Sans" font-size="11" font-weight="700" text-anchor="middle" x="172" y="408">영암군</text>
+</g>
+<g class="region-poly group" data-ladder="0.6 / 3.0점" data-name="전남 신안군" data-outflow="+28.2%p" data-status="도서 복합 소멸형" data-type="compound" tabindex="0">
+<path class="fill-primary hover:opacity-90 transition-colors cursor-pointer" d="M100,375 L145,375 L140,445 L95,435 Z"></path>
+<text fill="#ffffff" font-family="Public Sans" font-size="10" font-weight="700" text-anchor="middle" x="120" y="415">신안군</text>
+</g>
+<!-- 6. 경남 / 부산 / 울산권 (Gyeongnam & Busan) -->
+<g class="region-poly group" data-ladder="2.8 / 3.0점" data-name="부산·울산 광역권" data-outflow="-2.1%p" data-status="동남권 핵심 상권" data-type="stable" tabindex="0">
+<path class="fill-surface-variant hover:fill-secondary-container transition-colors cursor-pointer" d="M400,335 L475,340 L460,405 L395,395 Z"></path>
+<text fill="#121d26" font-family="Public Sans" font-size="11" font-weight="700" text-anchor="middle" x="435" y="370">부산·울산</text>
+</g>
+<g class="region-poly group" data-ladder="2.4 / 3.0점" data-name="경남 창원·김해" data-outflow="+1.5%p" data-status="제조업 및 배후 도시" data-type="stable" tabindex="0">
+<path class="fill-surface-variant hover:fill-secondary-container transition-colors cursor-pointer" d="M335,345 L395,340 L390,395 L330,390 Z"></path>
+<text fill="#43474e" font-family="Public Sans" font-size="10" font-weight="600" text-anchor="middle" x="365" y="372">창원·김해</text>
+</g>
+<g class="region-poly group" data-ladder="1.4 / 3.0점" data-name="경남 고성·통영" data-outflow="+11.3%p" data-status="조선소 외국인 의존 및 정주 결손" data-type="functional" tabindex="0">
+<path class="fill-on-tertiary-container hover:opacity-80 transition-colors cursor-pointer" d="M330,390 L385,395 L370,445 L320,435 Z"></path>
+<text fill="#ffffff" font-family="Public Sans" font-size="9" font-weight="700" text-anchor="middle" x="350" y="420">고성·통영</text>
+</g>
+<g class="region-poly group" data-ladder="1.0 / 3.0점" data-name="경남 거창·합천" data-outflow="+17.9%p" data-status="서부경남 복합 위기" data-type="compound" tabindex="0">
+<path class="fill-primary hover:opacity-90 transition-colors cursor-pointer" d="M280,325 L335,320 L335,370 L280,370 Z"></path>
+<text fill="#ffffff" font-family="Public Sans" font-size="10" font-weight="700" text-anchor="middle" x="308" y="350">합천·거창</text>
+</g>
+<!-- 7. 제주특별자치도 (Jeju) -->
+<g class="region-poly group" data-ladder="2.3 / 3.0점" data-name="제주특별자치도" data-outflow="-1.5%p" data-status="국제 관광 정주지" data-type="stable" tabindex="0">
+<ellipse class="fill-surface-variant hover:fill-secondary-container transition-colors cursor-pointer" cx="200" cy="525" rx="55" ry="25"></ellipse>
+<text fill="#43474e" font-family="Public Sans" font-size="10" font-weight="700" text-anchor="middle" x="200" y="529">제주</text>
+</g>
+<!-- 울릉도 / 독도 (Ulleung / Dokdo) -->
+<g class="region-poly group" data-ladder="1.1 / 3.0점" data-name="울릉군·독도" data-outflow="+3.2%p" data-status="특수 도서 지역" data-type="functional" tabindex="0">
+<circle class="fill-on-tertiary-container cursor-pointer" cx="530" cy="180" r="14"></circle>
+<text fill="#ffffff" font-family="Public Sans" font-size="9" font-weight="700" text-anchor="middle" x="530" y="184">울릉</text>
+<circle class="fill-on-tertiary-container" cx="565" cy="188" r="5"></circle>
+<text fill="#43474e" font-family="Public Sans" font-size="8" font-weight="600" text-anchor="middle" x="565" y="200">독도</text>
+</g>
+</svg>
+<!-- Map Navigation Controls Floating Widget -->
+<div class="absolute right-4 bottom-4 flex flex-col gap-1 bg-surface-container-lowest p-1 rounded shadow-sm">
+<button aria-label="지도 확대" class="p-1 text-on-surface hover:bg-surface-container rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<div class="w-full h-px bg-surface-container-highest"></div>
+<button aria-label="지도 축소" class="p-1 text-on-surface hover:bg-surface-container rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<div class="w-full h-px bg-surface-container-highest"></div>
+<button aria-label="지도 초기화" class="p-1 text-on-surface hover:bg-surface-container rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Right: Detailed Regional Profile Inspector (Selected: 전라남도 영암군) -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-lg p-5 flex flex-col justify-between" id="regional-detail-card">
+<div class="flex flex-col gap-3">
+<!-- Card Header & Badges -->
+<div class="flex items-start justify-between">
+<div>
+<span class="font-caption-regular text-caption-regular text-outline">행정코드 46830 · 군 단위</span>
+<h3 class="font-headline-section text-headline-section text-on-surface font-bold mt-0.5" id="inspector-name">전라남도 영암군</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-caption-medium text-caption-medium font-bold" id="inspector-badge">
+              이탈 선행형
+            </span>
+</div>
+<!-- Alert Context Callout -->
+<div class="bg-error-container/30 p-3 rounded flex items-start gap-2.5">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col">
+<span class="font-caption-medium text-caption-medium text-error font-bold">집중 관리 대상 지자체 (우선 처방권 권고)</span>
+<p class="font-caption-regular text-caption-regular text-on-surface-variant mt-0.5">
+                상권 기능(마트·음식점·약국 등)은 2.1점으로 여전히 작동하고 있으나, 2030 세대 이동률이 급격히 이탈하여 인프라 사다리 붕괴 직전 단계에 진입하였습니다.
+              </p>
+</div>
+</div>
+<!-- Detailed Key Indicators Matrix -->
+<div class="grid grid-cols-2 gap-2 mt-1">
+<div class="bg-surface-container-lowest p-3 rounded shadow-xs flex flex-col">
+<span class="font-caption-regular text-caption-regular text-outline">상권 사다리 점수</span>
+<span class="font-headline-section text-headline-section text-on-surface font-bold tabular-nums mt-1" id="inspector-ladder">2.1 <span class="text-caption-medium font-normal text-on-surface-variant">/ 3.0점</span></span>
+<span class="font-caption-regular text-caption-regular text-secondary mt-1">2단계(외식·생활) 유지 중</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded shadow-xs flex flex-col">
+<span class="font-caption-regular text-caption-regular text-outline">세대이탈지수</span>
+<span class="font-headline-section text-headline-section text-error font-bold tabular-nums mt-1" id="inspector-outflow">+19.4 <span class="text-caption-medium font-normal text-error">%p</span></span>
+<span class="font-caption-regular text-caption-regular text-error mt-1">전국 상위 4.8% 위험</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded shadow-xs flex flex-col">
+<span class="font-caption-regular text-caption-regular text-outline">외국인 소비 의존율</span>
+<span class="font-headline-section text-headline-section text-on-surface font-bold tabular-nums mt-1">31.2 <span class="text-caption-medium font-normal text-on-surface-variant">%</span></span>
+<span class="font-caption-regular text-caption-regular text-on-surface-variant mt-1">대불산단 외국인 결제 비중</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded shadow-xs flex flex-col">
+<span class="font-caption-regular text-caption-regular text-outline">위계 정합도 판정</span>
+<span class="font-headline-section text-headline-section text-secondary font-bold tabular-nums mt-1">98.1 <span class="text-caption-medium font-normal text-on-surface-variant">%</span></span>
+<span class="font-caption-regular text-caption-regular text-secondary mt-1">사다리 연속성 부합</span>
+</div>
+</div>
+<!-- Mini Structural Progress Ladder -->
+<div class="bg-surface-container-lowest p-3.5 rounded shadow-xs flex flex-col gap-2 mt-1">
+<div class="flex items-center justify-between">
+<span class="font-caption-medium text-caption-medium text-on-surface font-semibold">기능 사다리 계통 유지 현황</span>
+<span class="font-caption-regular text-caption-regular text-outline">총 3단계 위계</span>
+</div>
+<div class="space-y-2">
+<div>
+<div class="flex justify-between font-caption-regular text-caption-regular mb-1">
+<span class="text-on-surface">1단계: 생필품 및 의원 보건</span>
+<span class="font-semibold text-secondary">완전 충족 (100%)</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-caption-regular text-caption-regular mb-1">
+<span class="text-on-surface">2단계: 일반 외식·편의 인프라</span>
+<span class="font-semibold text-secondary">유지 (72%)</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 72%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-caption-regular text-caption-regular mb-1">
+<span class="text-on-surface">3단계: 전문의료·영유아·문화</span>
+<span class="font-semibold text-error">이탈 중 (18%)</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 18%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Deep Dive Link -->
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-caption-regular text-caption-regular text-outline">담당: 영암군 기획감사실</span>
+<a class="inline-flex items-center gap-1 px-3 py-2 bg-primary text-on-primary hover:bg-primary-container font-body-semibold text-body-semibold rounded transition-colors text-sm" href="#">
+<span>영암군 정밀 진단서 열람</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive UI Micro-script (Filtering & Tooltip Hover Dynamics) -->
+<script>
+  (function() {
+    const tooltip = document.getElementById('map-tooltip');
+    const ttTitle = document.getElementById('tooltip-title');
+    const ttBadge = document.getElementById('tooltip-badge');
+    const ttLadder = document.getElementById('tooltip-ladder');
+    const ttOutflow = document.getElementById('tooltip-outflow');
+    const ttStatus = document.getElementById('tooltip-status');
+
+    // Inspector nodes
+    const inspName = document.getElementById('inspector-name');
+    const inspBadge = document.getElementById('inspector-badge');
+    const inspLadder = document.getElementById('inspector-ladder');
+    const inspOutflow = document.getElementById('inspector-outflow');
+
+    const polygons = document.querySelectorAll('.region-poly');
+    const filterBtns = document.querySelectorAll('#map-filter-group .filter-btn');
+
+    // Tooltip and selection handlers
+    polygons.forEach(poly => {
+      poly.addEventListener('mouseenter', (e) => {
+        const name = poly.getAttribute('data-name');
+        const type = poly.getAttribute('data-type');
+        const ladder = poly.getAttribute('data-ladder');
+        const outflow = poly.getAttribute('data-outflow');
+        const status = poly.getAttribute('data-status');
+
+        ttTitle.textContent = name;
+        ttLadder.textContent = ladder;
+        ttOutflow.textContent = outflow;
+        ttStatus.textContent = status;
+
+        // Set type badge style
+        if (type === 'leading') {
+          ttBadge.textContent = '이탈 선행형';
+          ttBadge.className = 'px-1.5 py-0.5 rounded text-[11px] font-bold bg-error text-on-error';
+        } else if (type === 'functional') {
+          ttBadge.textContent = '기능 결손형';
+          ttBadge.className = 'px-1.5 py-0.5 rounded text-[11px] font-bold bg-on-tertiary-container text-on-tertiary';
+        } else if (type === 'compound') {
+          ttBadge.textContent = '복합 소멸형';
+          ttBadge.className = 'px-1.5 py-0.5 rounded text-[11px] font-bold bg-primary text-on-primary';
+        } else {
+          ttBadge.textContent = '유지형';
+          ttBadge.className = 'px-1.5 py-0.5 rounded text-[11px] font-bold bg-surface-container text-on-surface-variant';
+        }
+
+        tooltip.classList.remove('hidden');
+      });
+
+      poly.addEventListener('mousemove', (e) => {
+        const containerRect = poly.closest('svg').getBoundingClientRect();
+        const mouseX = e.clientX - containerRect.left;
+        const mouseY = e.clientY - containerRect.top;
+        tooltip.style.left = `${mouseX + 16}px`;
+        tooltip.style.top = `${mouseY - 24}px`;
+      });
+
+      poly.addEventListener('mouseleave', () => {
+        tooltip.classList.add('hidden');
+      });
+
+      poly.addEventListener('click', () => {
+        const name = poly.getAttribute('data-name');
+        const type = poly.getAttribute('data-type');
+        const ladder = poly.getAttribute('data-ladder');
+        const outflow = poly.getAttribute('data-outflow');
+
+        inspName.textContent = name;
+        inspLadder.innerHTML = `${ladder.split('/')[0]} <span class="text-caption-medium font-normal text-on-surface-variant">/ 3.0점</span>`;
+        inspOutflow.innerHTML = `${outflow} <span class="text-caption-medium font-normal text-error">%p</span>`;
+
+        if (type === 'leading') {
+          inspBadge.textContent = '이탈 선행형';
+          inspBadge.className = 'px-2 py-0.5 rounded bg-error-container text-on-error-container font-caption-medium text-caption-medium font-bold';
+        } else if (type === 'functional') {
+          inspBadge.textContent = '기능 결손형';
+          inspBadge.className = 'px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-caption-medium text-caption-medium font-bold';
+        } else if (type === 'compound') {
+          inspBadge.textContent = '복합 소멸형';
+          inspBadge.className = 'px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-caption-medium text-caption-medium font-bold';
+        } else {
+          inspBadge.textContent = '유지형';
+          inspBadge.className = 'px-2 py-0.5 rounded bg-surface-container text-on-surface font-caption-medium text-caption-medium font-bold';
+        }
+      });
+    });
+
+    // Map Category Filter Chips Logic
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'font-semibold');
+          b.classList.add('text-on-surface');
+        });
+        btn.classList.remove('text-on-surface');
+        btn.classList.add('bg-primary', 'text-on-primary', 'font-semibold');
+
+        const filter = btn.getAttribute('data-filter');
+        polygons.forEach(poly => {
+          const type = poly.getAttribute('data-type');
+          if (filter === 'all' || filter === type) {
+            poly.style.opacity = '1';
+            poly.style.pointerEvents = 'auto';
+          } else {
+            poly.style.opacity = '0.15';
+            poly.style.pointerEvents = 'none';
+          }
+        });
+      });
+    });
+  })();
+</script></main></div></body></html>
