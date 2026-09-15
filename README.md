@@ -70,9 +70,6 @@
 두 프로세스를 띄웁니다. 자세한 버전 요구와 문제 해결은 [requirements.md](requirements.md) 에 있습니다.
 
 ```bash
-# 0. 공모전 제공 데이터를 넣습니다 (저장소에 포함되지 않음)
-cp <내려받은>/ABP_CONTEST_DATA.csv data/
-
 # 1. 백엔드 (포트 8000)
 cd backend
 pip install -r requirements.txt
@@ -98,6 +95,19 @@ cd backend
 python3 maek_engine.py --card ../data/ABP_CONTEST_DATA.csv --out ./output --no-llm
 ```
 
+## 배포 (Vercel)
+
+저장소 루트의 `vercel.json` 이 한 프로젝트 안에 두 서비스를 정의합니다. `web`(Vite 정적
+빌드, `frontend/`)과 `api`(FastAPI, `backend/`)가 따로 빌드되고, `/api/*` 는 api 로,
+나머지는 web 으로 라우팅됩니다. GitHub 저장소를 Vercel 프로젝트에 연결하면 `main` 푸시마다
+자동 배포됩니다.
+
+- api 서비스는 빌드 때 `../data` 를 `backend/data` 로 복사해 번들에 넣습니다. 엔진은
+  `data/` 가 없으면 `backend/data` 를 찾습니다.
+- LLM 서술문을 켜려면 Vercel 프로젝트 설정 → Environment Variables 에 `OPENAI_API_KEY` 를
+  추가하고 다시 배포합니다. 없으면 템플릿 서술로 동작합니다.
+- 함수 실행 한도는 60초, Fluid compute 로 인스턴스가 유지되어 엔진 적재는 첫 요청에만 듭니다.
+
 ## 구조
 
 ```
@@ -121,7 +131,7 @@ requirements.md     실행 환경·의존성·문제 해결
 
 | 원천 | 상태 | 용도 |
 |---|---|---|
-| BC카드 시군구·업종별 소비데이터 (공모전 제공) | **필수** · 직접 배치 | 모든 지표의 바탕 |
+| BC카드 시군구·업종별 소비데이터 (공모전 제공) | **필수** · 포함 | 모든 지표의 바탕 |
 | 행안부 주민등록 인구통계 2026-06 | 포함 | 생활소비 원단위, 실존 인구 괴리율, 원인 분해 |
 | 지방소멸위험지수 (같은 인구 자료로 고용정보원 산식 적용) | 포함 | 선행 경보·과소평가 판정의 대조 기준 |
 | 행안부 인구감소지역 지정 현황 89곳 | 포함 | 지정 여부 대조, 미지정 우선 검토 대상 |
@@ -163,6 +173,5 @@ requirements.md     실행 환경·의존성·문제 해결
 
 ## 저장소에 없는 것
 
-- `data/ABP_CONTEST_DATA.csv` — 공모전 제공 데이터. 재배포 조건에 따라 직접 배치합니다.
 - `backend/.env` — API 키. `.env.example` 을 복사해 만듭니다.
 - 공모전 제출 서류.

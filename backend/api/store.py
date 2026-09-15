@@ -38,7 +38,16 @@ log = logging.getLogger("maek.api")
 
 BACKEND_DIR = Path(__file__).resolve().parent.parent
 PROJECT_DIR = BACKEND_DIR.parent
-DATA_DIR = Path(os.environ.get("MAEK_DATA_DIR", PROJECT_DIR / "data"))
+# 데이터 위치. 로컬은 저장소의 data/, Vercel 은 서비스 루트(backend/)만 번들에 들어가므로
+# 빌드 때 backend/data 로 복사해 둔 것을 쓴다. MAEK_DATA_DIR 로 어디든 바꿀 수 있다.
+def _default_data_dir() -> Path:
+    for candidate in (PROJECT_DIR / "data", BACKEND_DIR / "data"):
+        if (candidate / "ABP_CONTEST_DATA.csv").exists():
+            return candidate
+    return PROJECT_DIR / "data"
+
+
+DATA_DIR = Path(os.environ.get("MAEK_DATA_DIR") or _default_data_dir())
 
 CARD_PATH = DATA_DIR / "ABP_CONTEST_DATA.csv"
 # 선택 입력. 없으면 해당 지표만 비고 나머지 진단은 그대로 동작한다.

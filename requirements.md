@@ -77,10 +77,11 @@ npm run build     # dist/ 산출 (정적 파일)
 
 | 파일 | 필수 | 저장소 포함 | 출처 |
 |---|---|---|---|
-| `data/ABP_CONTEST_DATA.csv` | **필수** | 아니오 | 공모전 제공 BC카드 소비데이터. 직접 넣어야 합니다 |
+| `data/ABP_CONTEST_DATA.csv` | **필수** | 예 (16MB) | 공모전 제공 BC카드 소비데이터 2026.01~06 |
 | `data/population.csv` | 선택 | 예 | 행안부 주민등록 인구통계 2026-06 |
 | `data/risk_index.csv` | 선택 | 예 | 같은 자료로 산출한 지방소멸위험지수 |
 | `data/decline_areas.csv` | 선택 | 예 | 행안부 인구감소지역 지정 89곳 |
+| `data/raw/jumin_age_2026_06.csv` | 기록용 | 예 | 소멸위험지수 산출에 쓴 행안부 연령별 인구 원본 |
 
 선택 파일이 없으면 해당 지표만 "미연동"으로 표시되고 나머지는 동작합니다.
 형식과 갱신 방법은 [data/README.md](data/README.md) 에 있습니다.

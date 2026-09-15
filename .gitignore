@@ -3,9 +3,6 @@ backend/.env
 .env
 *.local
 
-# ── 공모전 제공 원본 데이터 (재배포 조건 확인 전까지 저장소에 넣지 않는다) ──
-data/ABP_CONTEST_DATA.csv
-
 # ── 제출 서류·문서 (개인정보 포함) ──
 제출서류/
 *.docx
@@ -17,6 +14,8 @@ data/ABP_CONTEST_DATA.csv
 node_modules/
 frontend/dist/
 backend/output/
+# Vercel 빌드가 ../data 를 복사해 넣는 자리 (gitignore 는 줄 끝 주석을 허용하지 않는다)
+backend/data/
 __pycache__/
 *.pyc
 .venv/
