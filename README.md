@@ -97,6 +97,8 @@ python3 maek_engine.py --card ../data/ABP_CONTEST_DATA.csv --out ./output --no-l
 
 ## 배포 (Vercel)
 
+**서비스 주소: https://maek-jade.vercel.app** — `main` 브랜치가 그대로 올라갑니다.
+
 저장소 루트의 `vercel.json` 이 한 프로젝트 안에 두 서비스를 정의합니다. `web`(Vite 정적
 빌드, `frontend/`)과 `api`(FastAPI, `backend/`)가 따로 빌드되고, `/api/*` 는 api 로,
 나머지는 web 으로 라우팅됩니다. GitHub 저장소를 Vercel 프로젝트에 연결하면 `main` 푸시마다
